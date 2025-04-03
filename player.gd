@@ -6,7 +6,7 @@ const ROLLSPEED = deg_to_rad(8.5)
 
 const GRAVITY = 1
 
-var JUMPSPEED = 15
+var JUMPSPEED = 30
 
 const MOUSESENSITIVITY = 0.01 # set mouse sensitivity
 
