@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnf270jh26jys"]
+[gd_scene load_steps=3 format=3 uid="uid://bnf270jh26jys"]
 
 [ext_resource type="MeshLibrary" uid="uid://ck8pi4myucf4q" path="res://Block1.tres" id="1_jl26d"]
+[ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="2_5s8la"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_jl26d")
+cell_size = Vector3(1, 1, 1)
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_5s8la")]
