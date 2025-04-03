@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bnf270jh26jys"]
+[gd_scene load_steps=2 format=3 uid="uid://bnf270jh26jys"]
+
+[ext_resource type="MeshLibrary" uid="uid://ck8pi4myucf4q" path="res://Block1.tres" id="1_jl26d"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_jl26d")

@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://dnoriaxlgjdbq"]
+[gd_scene load_steps=4 format=3 uid="uid://dnoriaxlgjdbq"]
 
-[node name="Node3D" type="Node3D"]
+[ext_resource type="Script" uid="uid://gylh7jk6cj78" path="res://player.gd" id="1_xhfnw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kpjcp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kne1u"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_xhfnw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_kpjcp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.957677, 0.287845, 0, -0.287845, 0.957677, 0, 1.13313, 1.07978)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_kne1u")
