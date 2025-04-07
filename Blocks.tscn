@@ -1,15 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://blmpk7x75a1ae"]
+[gd_scene load_steps=9 format=3 uid="uid://blmpk7x75a1ae"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lm5t"]
+[ext_resource type="Texture2D" uid="uid://bdr8m8omt0ewm" path="res://texture/ground texture/Stylized_Stone_Floor_006_basecolor.png" id="1_grwwf"]
+[ext_resource type="Texture2D" uid="uid://timjtydcc03t" path="res://texture/ground texture/Stylized_Stone_Floor_006_ambientOcclusion.png" id="2_4137d"]
+[ext_resource type="Texture2D" uid="uid://cpqqdt0qfkbra" path="res://texture/ground texture/Stylized_Stone_Floor_006_height.png" id="3_mtro2"]
+[ext_resource type="Texture2D" uid="uid://o22iu4r5lyf" path="res://texture/ground texture/Stylized_Stone_Floor_006_normal.png" id="4_mcxa2"]
+[ext_resource type="Texture2D" uid="uid://7vbivl1boii2" path="res://texture/ground texture/Stylized_Stone_Floor_006_roughness.png" id="5_qbpr1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7b4p"]
+albedo_texture = ExtResource("1_grwwf")
+roughness_texture = ExtResource("5_qbpr1")
+normal_enabled = true
+normal_scale = 11.46
+normal_texture = ExtResource("4_mcxa2")
+ao_enabled = true
+ao_texture = ExtResource("2_4137d")
+heightmap_enabled = true
+heightmap_scale = -0.989
+heightmap_texture = ExtResource("3_mtro2")
 
 [sub_resource type="BoxMesh" id="BoxMesh_0blda"]
-material = SubResource("StandardMaterial3D_8lm5t")
+material = SubResource("StandardMaterial3D_w7b4p")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_imu2c"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.15737, 0, 0, 0, 2.08859, 0, 0, 0, 2.16344, 0, 0, 0)
 mesh = SubResource("BoxMesh_0blda")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
