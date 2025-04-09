@@ -13,7 +13,7 @@ script = ExtResource("1_xhfnw")
 shape = SubResource("SphereShape3D_kpjcp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.957677, 0.287845, 0, -0.287845, 0.957677, 0, 1.13313, 1.07978)
+transform = Transform3D(1, 0, 0, 0, 0.894365, 0.447337, 0, -0.447337, 0.894365, 0, 1.13313, 1.56175)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_kne1u")

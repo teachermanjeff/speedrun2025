@@ -1,77 +1,81 @@
 extends CharacterBody3D
 
-var MOVESPEED = 8
+const  ROLLspeed = deg_to_rad(5)
+var speed = 50
+# Called when the node enters the scene tree for the first time.
+const jumpspeed = 40
+const gravity = 2
+var sensitivity =100
+var double_jump = 1
+var time_for_doublejump = 3
 
-const ROLLSPEED = deg_to_rad(8.5)
 
-const GRAVITY = 1
+func _on_timer_timeout():
+	time_for_doublejump -= 1
+	if not is_on_floor():
+		if time_for_doublejump == 0:
+			double_jump = 0
+	print("double_jump")
 
-var JUMPSPEED = 15
-
-const MOUSESENSITIVITY = 0.01 # set mouse sensitivity
-
-func _ready():
-
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # make you mouse can't move around
-
-func _unhandled_input(event):
-
-	if event is InputEventMouseMotion:
-
-		rotation.y = rotation.y - event.relative.x * MOUSESENSITIVITY 
-
-# make mouse look work 
-
-func _process(_delta):
-
-# make mouse move work with moving character
-
-	if Input.is_action_just_released("exit"):
-
+	
+func _process(delta):
+	#restart
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+	
+	#quit the game
+	if Input.is_action_just_pressed("Quit"):
 		get_tree().quit()
+		print("quit")
+	if Input.is_action_pressed("editmap"):
+		if Input.is_action_pressed("jump"):
+			velocity.y = jumpspeed
+		else:
+			velocity.y = 0
+	else:
+		velocity.y = velocity.y - gravity
+		if double_jump > 0:
+			if Input.is_action_just_pressed("jump"):
+				velocity.y = jumpspeed
+				double_jump -= 1
+				print(double_jump)
+		if is_on_floor():
+			double_jump = 1
 
-	velocity.y = velocity.y - GRAVITY
-
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-
-		velocity.y = JUMPSPEED
-
-	if Input.is_action_pressed("forward"):
-
-		velocity.z = -MOVESPEED * global_transform.basis.z.z
-
-		velocity.x = -MOVESPEED * global_transform.basis.z.x
-
-		$MeshInstance3D.rotate_x(-ROLLSPEED)
-
-	elif Input.is_action_pressed("backward"):
-
-		velocity.z = MOVESPEED * global_transform.basis.z.z
-
-		velocity.x = MOVESPEED * global_transform.basis.z.x
-
-		$MeshInstance3D.rotate_x(ROLLSPEED)
-
-	elif Input.is_action_pressed("right"):
-
-		velocity.x = MOVESPEED * global_transform.basis.x.x
-
-		velocity.z = MOVESPEED * global_transform.basis.x.z
-
-		$MeshInstance3D.rotate_z(-ROLLSPEED)
+		
+	#movement
+	if Input.is_action_pressed("right"):
+		velocity.z = speed * global_transform.basis.x.z
+		velocity.x = speed * global_transform.basis.x.x
+		
+		$MeshInstance3D.rotate_z (-ROLLspeed)
 
 	elif Input.is_action_pressed("left"):
+		velocity.z = -speed * global_transform.basis.x.z
+		velocity.x = -speed * global_transform.basis.x.x
+		$MeshInstance3D.rotate_z (ROLLspeed)
 
-		velocity.x = -MOVESPEED * global_transform.basis.x.x
+	elif Input.is_action_pressed("forward"):
+		velocity.z = -speed * global_transform.basis.z.z
+		velocity.x = -speed * global_transform.basis.z.x
 
-		velocity.z = -MOVESPEED * global_transform.basis.x.z
-
-		$MeshInstance3D.rotate_z(ROLLSPEED)
-
-	else:# stop
-
-		velocity.x = 0
-
+		$MeshInstance3D.rotate_x (-ROLLspeed)
+	elif Input.is_action_pressed("backward"):
+		velocity.z = speed * global_transform.basis.z.z
+		velocity.x = speed * global_transform.basis.z.x
+		$MeshInstance3D.rotate_x (ROLLspeed)
+	
+	else:
 		velocity.z = 0
-
+		velocity.x = 0
+	
 	move_and_slide()
+	
+
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		rotation.y += event.relative.x / -sensitivity
+		rotation.x += event.relative.y / - sensitivity
