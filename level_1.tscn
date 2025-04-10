@@ -16,7 +16,7 @@ absorbent = true
 transform = Transform3D(0.984971, 0.0238768, 0.171062, -0.17272, 0.136162, 0.975514, 7.16111e-10, -0.990399, 0.13824, 0, 14.4292, 0.0471553)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_3hls8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58143, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.79022, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.25e+08, 0, 0, 0, 0, 0, 0, 0, 1.25e+08, 0, 0, 0)

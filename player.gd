@@ -18,7 +18,7 @@ func _on_timer_timeout():
 	print("double_jump")
 
 	
-func _process(delta):
+func _process(_delta):
 	#restart
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()

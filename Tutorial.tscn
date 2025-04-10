@@ -1,19 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnf270jh26jys"]
+[gd_scene load_steps=5 format=3 uid="uid://bnf270jh26jys"]
 
 [ext_resource type="MeshLibrary" uid="uid://ck8pi4myucf4q" path="res://Block1.tres" id="1_jl26d"]
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="2_5s8la"]
-
-[sub_resource type="Texture2DRD" id="Texture2DRD_5s8la"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5s8la"]
-panorama = SubResource("Texture2DRD_5s8la")
-
-[sub_resource type="Sky" id="Sky_fr6qw"]
-sky_material = SubResource("PanoramaSkyMaterial_5s8la")
-
-[sub_resource type="Environment" id="Environment_oiqhk"]
-background_mode = 2
-sky = SubResource("Sky_fr6qw")
+[ext_resource type="PackedScene" uid="uid://cjb6w3f2dymc5" path="res://Fall_area.tscn" id="3_oiqhk"]
+[ext_resource type="Script" uid="uid://cgt1vsnd7mf0k" path="res://fall_area.gd" id="4_p3v23"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -29,9 +19,11 @@ metadata/_editor_floor_ = Vector3(0, 3, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="DirectionalLight3D4" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.524781, 0.628017, -0.57463, -0.0308811, 0.688654, 0.724433, 0.850677, -0.362423, 0.380786, 104.357, 91.5779, 0.0207624)
+transform = Transform3D(-0.0156064, 0.724357, -0.689248, -0.0308811, 0.688654, 0.724432, 0.999401, 0.0325905, 0.0116215, 7.4039, 25.1655, 0.336895)
 light_energy = 7.303
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_oiqhk")
+[node name="Area3D" parent="." instance=ExtResource("3_oiqhk")]
+script = ExtResource("4_p3v23")
+
+[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
