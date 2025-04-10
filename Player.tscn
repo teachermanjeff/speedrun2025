@@ -6,7 +6,7 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_kne1u"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_xhfnw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
