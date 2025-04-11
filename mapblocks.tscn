@@ -1,0 +1,69 @@
+[gd_scene load_steps=18 format=3 uid="uid://cu1ct2om4e706"]
+
+[ext_resource type="Texture2D" uid="uid://d358lpmf2ht0i" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_basecolor.png" id="1_ptonu"]
+[ext_resource type="Texture2D" uid="uid://dgoehfylab2w" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_ambientOcclusion.png" id="2_fx4xb"]
+[ext_resource type="Texture2D" uid="uid://dqlmjt0l0on7n" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_height.png" id="3_lplda"]
+[ext_resource type="Texture2D" uid="uid://ofc1pcvfgl1y" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_normal.png" id="4_nkfsi"]
+[ext_resource type="Texture2D" uid="uid://dypvmhsaw63h8" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_roughness.png" id="5_t6vwf"]
+[ext_resource type="Texture2D" uid="uid://d2m4d62fq1oft" path="res://texture/ground texture/card/Stylized_Card_001_basecolor.png" id="6_sjhwd"]
+[ext_resource type="Texture2D" uid="uid://csrdv1v42orgo" path="res://texture/ground texture/card/Stylized_Card_001_ambientOcclusion.png" id="7_cokin"]
+[ext_resource type="Texture2D" uid="uid://du0imxg3l20mw" path="res://texture/ground texture/card/Stylized_Card_001_emissive.png" id="8_p7tt6"]
+[ext_resource type="Texture2D" uid="uid://diddstxnu6anm" path="res://texture/ground texture/card/Stylized_Card_001_height.png" id="9_06mco"]
+[ext_resource type="Texture2D" uid="uid://di5o1x7a3mt70" path="res://texture/ground texture/card/Stylized_Card_001_metallic.png" id="10_d1h1g"]
+[ext_resource type="Texture2D" uid="uid://bmrsrg1sm48k1" path="res://texture/ground texture/card/Stylized_Card_001_normal.png" id="11_50eey"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjinu"]
+albedo_texture = ExtResource("1_ptonu")
+roughness = 0.15
+roughness_texture = ExtResource("5_t6vwf")
+normal_enabled = true
+normal_scale = -2.88
+normal_texture = ExtResource("4_nkfsi")
+ao_enabled = true
+ao_texture = ExtResource("2_fx4xb")
+heightmap_enabled = true
+heightmap_scale = 1.509
+heightmap_texture = ExtResource("3_lplda")
+
+[sub_resource type="BoxMesh" id="BoxMesh_hehc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ca056"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nje3s"]
+albedo_texture = ExtResource("6_sjhwd")
+metallic = 1.0
+metallic_texture = ExtResource("10_d1h1g")
+emission_enabled = true
+emission_texture = ExtResource("8_p7tt6")
+normal_enabled = true
+normal_texture = ExtResource("11_50eey")
+ao_enabled = true
+ao_texture = ExtResource("7_cokin")
+heightmap_enabled = true
+heightmap_texture = ExtResource("9_06mco")
+
+[sub_resource type="SphereMesh" id="SphereMesh_mgwx3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ul6sf"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01416, 0, 0)
+material_override = SubResource("StandardMaterial3D_qjinu")
+mesh = SubResource("BoxMesh_hehc1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_ca056")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.986311, -0.0156336, 0.00427053, 0.0152501, 1.01137, -0.00097938, -0.0039678, 0.000999514, 1.0578, -0.715402, 0, 0.0384974)
+material_override = SubResource("StandardMaterial3D_nje3s")
+mesh = SubResource("SphereMesh_mgwx3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("SphereShape3D_ul6sf")
