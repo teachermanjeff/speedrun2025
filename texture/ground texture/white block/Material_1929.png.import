@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do4il23plm0hv"
-path.s3tc="res://.godot/imported/Stylized_Card_001_roughness.png-87bec649d785f4ecb71680f5f00ef898.s3tc.ctex"
+uid="uid://d1mk7mgt8bapl"
+path="res://.godot/imported/Material_1929.png-3572d0b638b979dc6139acc43623c26a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/ground texture/card/Stylized_Card_001_roughness.png"
-dest_files=["res://.godot/imported/Stylized_Card_001_roughness.png-87bec649d785f4ecb71680f5f00ef898.s3tc.ctex"]
+source_file="res://texture/ground texture/white block/Material_1929.png"
+dest_files=["res://.godot/imported/Material_1929.png-3572d0b638b979dc6139acc43623c26a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

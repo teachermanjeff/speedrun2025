@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do4il23plm0hv"
-path.s3tc="res://.godot/imported/Stylized_Card_001_roughness.png-87bec649d785f4ecb71680f5f00ef898.s3tc.ctex"
+uid="uid://vd17lgst3g0b"
+path.s3tc="res://.godot/imported/Tiles_055_basecolor.png-59b06e610fcba0c04b6a7e28ce34e2b8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texture/ground texture/card/Stylized_Card_001_roughness.png"
-dest_files=["res://.godot/imported/Stylized_Card_001_roughness.png-87bec649d785f4ecb71680f5f00ef898.s3tc.ctex"]
+source_file="res://texture/ground texture/white block/Tiles_055_basecolor.png"
+dest_files=["res://.godot/imported/Tiles_055_basecolor.png-59b06e610fcba0c04b6a7e28ce34e2b8.s3tc.ctex"]
 
 [params]
 

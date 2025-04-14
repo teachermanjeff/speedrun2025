@@ -1,16 +1,39 @@
-[gd_scene load_steps=18 format=3 uid="uid://cu1ct2om4e706"]
+[gd_scene load_steps=26 format=3 uid="uid://cu1ct2om4e706"]
 
 [ext_resource type="Texture2D" uid="uid://d358lpmf2ht0i" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_basecolor.png" id="1_ptonu"]
+[ext_resource type="Texture2D" uid="uid://bhaqt6oomfgdq" path="res://texture/ground texture/bar block/Concrete_Wall_008_basecolor.jpg" id="1_sjhwd"]
+[ext_resource type="Texture2D" uid="uid://c1tlpq8qdhuoh" path="res://texture/ground texture/bar block/Concrete_Wall_008_ambientOcclusion.jpg" id="2_cokin"]
 [ext_resource type="Texture2D" uid="uid://dgoehfylab2w" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_ambientOcclusion.png" id="2_fx4xb"]
 [ext_resource type="Texture2D" uid="uid://dqlmjt0l0on7n" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_height.png" id="3_lplda"]
+[ext_resource type="Texture2D" uid="uid://bm48fkupxs2de" path="res://texture/ground texture/bar block/Concrete_Wall_008_height.png" id="3_p7tt6"]
+[ext_resource type="Texture2D" uid="uid://c4g6lrlhgty8v" path="res://texture/ground texture/bar block/Concrete_Wall_008_metallic.jpg" id="4_06mco"]
 [ext_resource type="Texture2D" uid="uid://ofc1pcvfgl1y" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_normal.png" id="4_nkfsi"]
+[ext_resource type="Texture2D" uid="uid://bmpcisxv60w1l" path="res://texture/ground texture/bar block/Concrete_Wall_008_normal.jpg" id="5_d1h1g"]
 [ext_resource type="Texture2D" uid="uid://dypvmhsaw63h8" path="res://texture/ground texture/fabric/Fabric_Embroidery_001_roughness.png" id="5_t6vwf"]
-[ext_resource type="Texture2D" uid="uid://d2m4d62fq1oft" path="res://texture/ground texture/card/Stylized_Card_001_basecolor.png" id="6_sjhwd"]
-[ext_resource type="Texture2D" uid="uid://csrdv1v42orgo" path="res://texture/ground texture/card/Stylized_Card_001_ambientOcclusion.png" id="7_cokin"]
-[ext_resource type="Texture2D" uid="uid://du0imxg3l20mw" path="res://texture/ground texture/card/Stylized_Card_001_emissive.png" id="8_p7tt6"]
-[ext_resource type="Texture2D" uid="uid://diddstxnu6anm" path="res://texture/ground texture/card/Stylized_Card_001_height.png" id="9_06mco"]
-[ext_resource type="Texture2D" uid="uid://di5o1x7a3mt70" path="res://texture/ground texture/card/Stylized_Card_001_metallic.png" id="10_d1h1g"]
-[ext_resource type="Texture2D" uid="uid://bmrsrg1sm48k1" path="res://texture/ground texture/card/Stylized_Card_001_normal.png" id="11_50eey"]
+[ext_resource type="Texture2D" uid="uid://vd17lgst3g0b" path="res://texture/ground texture/white block/Tiles_055_basecolor.png" id="6_6efjm"]
+[ext_resource type="Texture2D" uid="uid://buonf62r50qro" path="res://texture/ground texture/bar block/Concrete_Wall_008_roughness.jpg" id="6_50eey"]
+[ext_resource type="Texture2D" uid="uid://km877nbo7as1" path="res://texture/ground texture/white block/Tiles_055_ambientOcclusion.png" id="7_ptonu"]
+[ext_resource type="Texture2D" uid="uid://df6prpoyqi8ms" path="res://texture/ground texture/white block/Tiles_055_height.png" id="8_fx4xb"]
+[ext_resource type="Texture2D" uid="uid://dlgre335d78lc" path="res://texture/ground texture/white block/Tiles_055_normal.png" id="9_lplda"]
+[ext_resource type="Texture2D" uid="uid://dfmdrtxuwuhe4" path="res://texture/ground texture/white block/Tiles_055_roughness.png" id="10_nkfsi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hehc1"]
+albedo_texture = ExtResource("1_sjhwd")
+metallic = 1.0
+metallic_texture = ExtResource("4_06mco")
+roughness_texture = ExtResource("6_50eey")
+normal_enabled = true
+normal_scale = 2.36
+normal_texture = ExtResource("5_d1h1g")
+ao_enabled = true
+ao_light_affect = 0.48
+ao_texture = ExtResource("2_cokin")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_p7tt6")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ca056"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8mrpi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjinu"]
 albedo_texture = ExtResource("1_ptonu")
@@ -29,24 +52,35 @@ heightmap_texture = ExtResource("3_lplda")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ca056"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nje3s"]
-albedo_texture = ExtResource("6_sjhwd")
-metallic = 1.0
-metallic_texture = ExtResource("10_d1h1g")
-emission_enabled = true
-emission_texture = ExtResource("8_p7tt6")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6vwf"]
+albedo_texture = ExtResource("6_6efjm")
+roughness_texture = ExtResource("10_nkfsi")
 normal_enabled = true
-normal_texture = ExtResource("11_50eey")
+normal_scale = -15.29
+normal_texture = ExtResource("9_lplda")
 ao_enabled = true
-ao_texture = ExtResource("7_cokin")
+ao_light_affect = 0.5
+ao_texture = ExtResource("7_ptonu")
 heightmap_enabled = true
-heightmap_texture = ExtResource("9_06mco")
+heightmap_scale = -5.473
+heightmap_texture = ExtResource("8_fx4xb")
 
-[sub_resource type="SphereMesh" id="SphereMesh_mgwx3"]
+[sub_resource type="BoxMesh" id="BoxMesh_sjhwd"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ul6sf"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3trpx"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.980616, -0.0097958, 0.00427201, 0.0151621, 0.633711, -0.000979719, -0.00394489, 0.000626282, 1.05817, 0.0884931, 5.96046e-08, 0.0384707)
+material_override = SubResource("StandardMaterial3D_hehc1")
+mesh = SubResource("CylinderMesh_ca056")
+skeleton = NodePath("../MeshInstance3D2/StaticBody3D/CollisionShape3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+shape = SubResource("CylinderShape3D_8mrpi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01416, 0, 0)
@@ -59,11 +93,11 @@ mesh = SubResource("BoxMesh_hehc1")
 shape = SubResource("BoxShape3D_ca056")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.986311, -0.0156336, 0.00427053, 0.0152501, 1.01137, -0.00097938, -0.0039678, 0.000999514, 1.0578, -0.715402, 0, 0.0384974)
-material_override = SubResource("StandardMaterial3D_nje3s")
-mesh = SubResource("SphereMesh_mgwx3")
+transform = Transform3D(0.986311, -0.0156336, 0.00427053, 0.0152501, 1.01137, -0.00097938, -0.0039678, 0.000999514, 1.0578, -2.08897, 5.96046e-08, 0.0384707)
+material_override = SubResource("StandardMaterial3D_t6vwf")
+mesh = SubResource("BoxMesh_sjhwd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
-shape = SubResource("SphereShape3D_ul6sf")
+shape = SubResource("BoxShape3D_3trpx")
