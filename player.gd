@@ -3,7 +3,7 @@ extends CharacterBody3D
 const  ROLLspeed = deg_to_rad(5)
 var speed = 10
 # Called when the node enters the scene tree for the first time.
-const jumpspeed = 40
+const jumpspeed = 30
 const gravity = 2
 var sensitivity =100
 var double_jump = 1
