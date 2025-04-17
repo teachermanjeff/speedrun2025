@@ -10,11 +10,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if moving == true:
-		position.y -= 10
+		position.y -= 0.1
 
 
 func _on_body_entered(body):
-		if body.name == "player":
+		if body.name == "ball":
 			get_tree().reload_current_scene()
 
 
