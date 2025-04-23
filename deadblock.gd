@@ -1,6 +1,5 @@
 extends Area3D
 
-var moving = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,15 +7,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if moving == true:
-		position.y -= 0.1
 
 
 func _on_body_entered(body):
 		if body.name == "ball":
 			get_tree().reload_current_scene()
-
-
-func _on_area_3d_body_entered(body):
-	moving = true

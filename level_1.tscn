@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bmsmpnp7lfcu3"]
+[gd_scene load_steps=22 format=4 uid="uid://bmsmpnp7lfcu3"]
 
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
 [ext_resource type="PackedScene" uid="uid://dtwd40hjp4wqu" path="res://deadblock.tscn" id="2_5hph3"]
@@ -6,7 +6,7 @@
 [ext_resource type="MeshLibrary" uid="uid://eml2iwqtyj1u" path="res://newblocklib.tres" id="2_rka8t"]
 [ext_resource type="MeshLibrary" uid="uid://djlgvil5r0hnc" path="res://block2.tres" id="3_hn12h"]
 [ext_resource type="Texture2D" uid="uid://cu7oxnwil41vv" path="res://texture/kennytexture/Models/GLB format/Textures/truck.png" id="4_ihfcg"]
-[ext_resource type="Script" uid="uid://5urpbjn166co" path="res://path_follow_3d.gd" id="6_j7kpp"]
+[ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="7_j7kpp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
 
@@ -55,22 +55,89 @@ shadow_mesh = SubResource("ArrayMesh_xwauy")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rka8t"]
 data = PackedVector3Array(0.415, 0, 0.6142, -0.415, 0, 0.6142, -0.415, 0.0814, 0.6142, -0.415, 0.0814, 0.6142, 0.415, 0.0814, 0.6142, 0.415, 0, 0.6142, 0.415, 0, 0.6142, 0.415, 0, -0.6308, -0.415, 0, -0.6308, -0.415, 0, -0.6308, -0.415, 0, 0.6142, 0.415, 0, 0.6142, -0.415, 0, 0.6142, -0.415, 0, -0.6308, -0.415, 0.0814, -0.6308, -0.415, 0.0814, -0.6308, -0.415, 1.006, -0.5695, -0.415, 0, 0.6142, -0.415, 1.006, -0.5695, -0.415, 1.006, -0.3465, -0.415, 0, 0.6142, -0.415, 0.8272, -0.6564, -0.415, 1.006, -0.5695, -0.415, 0.0814, -0.6308, -0.415, 1.006, -0.3465, -0.415, 0.0814, 0.6142, -0.415, 0, 0.6142, -0.415, 1.006, -0.3465, -0.415, 1.006, 0.8217, -0.415, 0.0814, 0.6142, -0.415, 1.006, 0.8217, -0.415, 0.0814, 0.8217, -0.415, 0.0814, 0.6142, -0.415, 0.8272, -0.6929, -0.415, 0.8272, -0.6564, -0.415, 0.0814, -0.6308, -0.415, 0.7797, -0.7484, -0.415, 0.8272, -0.6929, -0.415, 0.0814, -0.6308, -0.415, 0.7797, -0.7484, -0.415, 0.0814, -0.6308, -0.415, 0.0814, -0.8217, -0.415, 0.0814, -0.8217, -0.415, 0.5348, -0.8217, -0.415, 0.7797, -0.7484, -0.415, 0.0814, -0.6308, -0.415, 0, -0.6308, 0.415, 0, -0.6308, 0.415, 0, -0.6308, 0.415, 0.0814, -0.6308, -0.415, 0.0814, -0.6308, -0.415, 0.8272, -0.6929, 0.415, 0.8272, -0.6929, 0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6564, -0.415, 0.8272, -0.6564, -0.415, 0.8272, -0.6929, 0.415, 0.0814, 0.6142, 0.415, 0.0814, 0.8217, 0.415, 1.006, 0.8217, 0.415, 1.006, 0.8217, 0.415, 1.006, -0.3465, 0.415, 0.0814, 0.6142, 0.415, 0, 0.6142, 0.415, 0.0814, 0.6142, 0.415, 1.006, -0.3465, 0.415, 0, 0.6142, 0.415, 1.006, -0.3465, 0.415, 1.006, -0.5695, 0.415, 0, -0.6308, 0.415, 0, 0.6142, 0.415, 1.006, -0.5695, 0.415, 0.0814, -0.6308, 0.415, 0, -0.6308, 0.415, 1.006, -0.5695, 0.415, 0.0814, -0.6308, 0.415, 1.006, -0.5695, 0.415, 0.8272, -0.6564, 0.415, 0.0814, -0.6308, 0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6929, 0.415, 0.0814, -0.6308, 0.415, 0.8272, -0.6929, 0.415, 0.7797, -0.7484, 0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.6308, 0.415, 0.7797, -0.7484, 0.415, 0.7797, -0.7484, 0.415, 0.5348, -0.8217, 0.415, 0.0814, -0.8217, -0.415, 0.5348, -0.8217, -0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.8217, 0.415, 0.5348, -0.8217, -0.415, 0.5348, -0.8217, -0.415, 0.7797, -0.7484, -0.415, 0.5348, -0.8217, 0.415, 0.5348, -0.8217, 0.415, 0.5348, -0.8217, 0.415, 0.7797, -0.7484, -0.415, 0.7797, -0.7484, -0.415, 0.7797, -0.7484, 0.415, 0.7797, -0.7484, 0.415, 0.8272, -0.6929, 0.415, 0.8272, -0.6929, -0.415, 0.8272, -0.6929, -0.415, 0.7797, -0.7484, -0.415, 1.006, -0.5695, -0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6564, 0.415, 1.006, -0.5695, -0.415, 1.006, -0.5695, -0.415, 0.0814, -0.6308, 0.415, 0.0814, -0.6308, 0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.8217, -0.415, 0.0814, -0.8217, -0.415, 0.0814, -0.6308, 0.415, 1.006, 0.8217, 0.415, 0.0814, 0.8217, -0.415, 0.0814, 0.8217, -0.415, 0.0814, 0.8217, -0.415, 1.006, 0.8217, 0.415, 1.006, 0.8217, -0.415, 0.0814, 0.8217, 0.415, 0.0814, 0.8217, 0.415, 0.0814, 0.6142, 0.415, 0.0814, 0.6142, -0.415, 0.0814, 0.6142, -0.415, 0.0814, 0.8217, -0.415, 1.006, -0.5695, 0.415, 1.006, -0.5695, 0.415, 1.006, -0.3465, 0.415, 1.006, -0.3465, -0.415, 1.006, -0.3465, -0.415, 1.006, -0.5695, -0.415, 1.006, -0.3465, 0.415, 1.006, -0.3465, 0.415, 1.006, 0.8217, 0.415, 1.006, 0.8217, -0.415, 1.006, 0.8217, -0.415, 1.006, -0.3465)
 
+[sub_resource type="Animation" id="Animation_j7kpp"]
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deadblock")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.65846, 9.74481, 11.7373, 1, 1, -1.65846, 6.83714, 11.7373, 2, 1, -1.65846, 9.74481, 11.7373)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("deadblock:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.65846, 9.74481, 11.7373)]
+}
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("deadblock2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 4.28224, 9.02977, -3.86471)
+
 [sub_resource type="Animation" id="Animation_bjebc"]
 resource_name = "deadblock"
+length = 7.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deadblock")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.65846, 9.74481, 11.7373, 2.96667, 1, -1.65846, 6.479, 11.7373, 7, 1, -1.65846, 9.87947, 11.7373)
+
+[sub_resource type="Animation" id="Animation_5hph3"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deadblock:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.65846, 10.9491, 11.7373), Vector3(-1.65846, 7.21259, 11.7373), Vector3(-1.65846, 10.9491, 11.7373), Vector3(-1.65846, 7.21259, 11.7373)]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("deadblock2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 4.28224, 9.99935, -3.86471, 0.933333, 1, 4.28224, 9.01857, -3.86471, 1.93333, 1, 4.28224, 9.01857, -3.86471, 2.4, 1, 4.28224, 9.99935, -3.86471)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5rr72"]
 _data = {
-&"deadblock": SubResource("Animation_bjebc")
+&"RESET": SubResource("Animation_j7kpp"),
+&"deadblock": SubResource("Animation_bjebc"),
+&"new_animation": SubResource("Animation_5hph3")
 }
 
-[sub_resource type="Curve3D" id="Curve3D_gyffv"]
-closed = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.72361, 3.80227, 11.5135, 0, 0, 0, 0, 0, 0, 0, 9.35658, 13.9689, 0, 0, 0, 0, 0, 0, 0, 8.48404, 10.849, 0, 0, 0, 0, 0, 0, 0, 2.81227, 10.5023, 0, 0, 0, 0, 0, 0, -2.724, 3.802, 11.514),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-up_vector_enabled = false
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjebc"]
+albedo_color = Color(0.980392, 0.976471, 0, 1)
+emission_enabled = true
+emission = Color(0.619608, 0.478431, 0, 1)
+emission_energy_multiplier = 16.0
+ao_light_affect = 0.81
+refraction_scale = 0.35
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5rr72"]
+material = SubResource("StandardMaterial3D_bjebc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42n78"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -78,7 +145,7 @@ up_vector_enabled = false
 transform = Transform3D(0.984971, 0.0238768, 0.171062, -0.17272, 0.136162, 0.975514, 7.16111e-10, -0.990399, 0.13824, 0, 14.4292, 0.0471553)
 
 [node name="ball" parent="." instance=ExtResource("1_3hls8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58143, 0)
+transform = Transform3D(-0.991211, 0, -0.132291, 0.0322639, 0.969804, -0.241742, 0.128296, -0.243886, -0.96128, 0, 1.58143, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.25e+08, 0, 0, 0, 0, 0, 0, 0, 1.25e+08, 0, 0, 0)
@@ -132,14 +199,25 @@ shape = SubResource("ConcavePolygonShape3D_rka8t")
 libraries = {
 &"": SubResource("AnimationLibrary_5rr72")
 }
-autoplay = "deadblock"
+autoplay = "new_animation"
 
-[node name="Path3D" type="Path3D" parent="."]
-curve = SubResource("Curve3D_gyffv")
+[node name="deadblock2" parent="." instance=ExtResource("2_5hph3")]
+transform = Transform3D(-0.502289, 0.000700111, 0.0548942, 0.000128652, 2.16369, 0.0118191, -0.00358624, -0.00656397, -2.78931, 4.28224, 9.02977, -3.86471)
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.669587, -0.619833, -0.409219, 0, 0.550963, -0.834529, 0.742733, -0.55879, -0.368918, -2.72361, 3.80227, 11.5135)
-script = ExtResource("6_j7kpp")
+[node name="deadblock3" type="Area3D" parent="."]
+transform = Transform3D(2.71994, 0, 0, 0, 7.59359, 0, 0, 0, 2.72031, 0, 0, 0)
+script = ExtResource("7_j7kpp")
 
-[node name="deadblock" parent="Path3D/PathFollow3D" instance=ExtResource("2_5hph3")]
-transform = Transform3D(0.730299, 0, 1.10895, -0.561587, 1.05018, 1.00434, -0.370765, -1.59069, 0.663071, -0.206168, 1.52952, -2.83613)
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock3"]
+transform = Transform3D(-0.300561, 0.000708736, 0.000789424, -0.001221, -0.174161, 0.00090926, 0.000747697, 0.000494933, 0.318819, 5.10561, 1.4591, -1.56319)
+mesh = SubResource("CylinderMesh_5rr72")
+skeleton = NodePath("../../deadblock3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock3"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_42n78")
+
+[node name="deadblock" parent="." instance=ExtResource("2_5hph3")]
+transform = Transform3D(0.00522482, -0.00831703, 2.73433, -0.00406046, 2.75562, 0.00831195, -0.99471, -0.0113032, 0.014344, -1.65846, 9.74481, 11.7373)
+
+[connection signal="body_entered" from="deadblock3" to="deadblock3" method="_on_body_entered"]
