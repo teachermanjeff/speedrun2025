@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuau7wwpujfbt"]
+
+[ext_resource type="PackedScene" uid="uid://nmyfsxd5a2vv" path="res://touchcontrol.tscn" id="1_0fbet"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 650.0
+
+[node name="touchcontrol" parent="." instance=ExtResource("1_0fbet")]
