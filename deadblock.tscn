@@ -14,6 +14,7 @@ refraction_scale = 0.35
 material = SubResource("StandardMaterial3D_7rft7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_42n78"]
+size = Vector3(10, 1, 1)
 
 [node name="deadblock" type="Area3D"]
 script = ExtResource("1_ymdra")
