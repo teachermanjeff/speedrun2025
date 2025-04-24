@@ -1,7 +1,13 @@
-[gd_scene load_steps=0 format=3 uid="uid://bpr6uq4dl273v"]
+[gd_scene load_steps=2 format=3 uid="uid://bpr6uq4dl273v"]
+
+[ext_resource type="Script" uid="uid://c5ytrpbgm574m" path="res://hud.gd" id="1_37p78"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_37p78")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

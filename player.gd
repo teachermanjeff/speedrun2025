@@ -18,7 +18,7 @@ func _on_timer_timeout():
 	print("double_jump")
 
 	
-func _process(delta):
+func _process(_delta):
 	#restart
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
@@ -69,9 +69,13 @@ func _process(delta):
 		velocity.z = 0
 		velocity.x = 0
 	
+	
+	if position.y < -10:
+		
+		get_tree().reload_current_scene()
+	
 	move_and_slide()
 	
-
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 

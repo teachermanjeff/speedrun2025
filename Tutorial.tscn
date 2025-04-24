@@ -1,19 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnf270jh26jys"]
+[gd_scene load_steps=3 format=3 uid="uid://bnf270jh26jys"]
 
 [ext_resource type="MeshLibrary" uid="uid://ck8pi4myucf4q" path="res://Block1.tres" id="1_jl26d"]
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="2_5s8la"]
-
-[sub_resource type="Texture2DRD" id="Texture2DRD_5s8la"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5s8la"]
-panorama = SubResource("Texture2DRD_5s8la")
-
-[sub_resource type="Sky" id="Sky_fr6qw"]
-sky_material = SubResource("PanoramaSkyMaterial_5s8la")
-
-[sub_resource type="Environment" id="Environment_oiqhk"]
-background_mode = 2
-sky = SubResource("Sky_fr6qw")
 
 [node name="Node3D" type="Node3D"]
 
@@ -32,6 +20,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 transform = Transform3D(0.524781, 0.628017, -0.57463, -0.0308811, 0.688654, 0.724433, 0.850677, -0.362423, 0.380786, 104.357, 91.5779, 0.0207624)
 light_energy = 7.303
 shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_oiqhk")
