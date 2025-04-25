@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/balcony-ladder-bottom.glb-535981814ba4c26b7b2
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

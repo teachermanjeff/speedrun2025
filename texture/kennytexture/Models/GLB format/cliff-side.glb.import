@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/cliff-side.glb-146f6d5076e7167fc5db10c982fefb
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

@@ -97,7 +97,9 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
-[node name="platformsHolder" type="Node3D" parent="."]
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.669589, -0.61983, -0.409219, 0, 0.550965, -0.834528, 0.742731, -0.558791, -0.36892, -2.72361, 3.80227, 11.5135)
+script = ExtResource("6_j7kpp")
 
 [node name="platform2" type="StaticBody3D" parent="platformsHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 8, -8)

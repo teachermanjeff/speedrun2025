@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/detail-awning-small.glb-3c6d5a7b84b66af1a28ca
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
