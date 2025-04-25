@@ -97,187 +97,156 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+[node name="Path3D#PathFollow3D" type="PathFollow3D" parent="."]
 transform = Transform3D(-0.669589, -0.61983, -0.409219, 0, 0.550965, -0.834528, 0.742731, -0.558791, -0.36892, -2.72361, 3.80227, 11.5135)
-script = ExtResource("6_j7kpp")
 
-[node name="platform2" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform2" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 8, -8)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform2#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform2#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform5" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform5" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.39, 20, -33.633)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform5#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform5#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform6" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform6" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.155, 24, -43.543)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform6#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform6#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform7" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform7" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6391, 28, -48.427)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform7#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform7#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform8" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform8" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1867, 32, -47.996)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform8#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform8#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform9" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform9" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4227, 36, -37.5534)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform9#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform9#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform10" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform10" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.93, 40, -28.5099)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform10#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform10#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform11" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform11" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.137, 32, -22.6594)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform11#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform11#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform12" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform12" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.2028, 36, -12.8471)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform12#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform12#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform13" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform13" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.9302, 40, -9.05824)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform13#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform13#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform14" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform14" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.0576, 44, -1.843)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform14#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform14#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform15" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform15" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2685, 48, 6.94375)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform15#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform15#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform3" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform3" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93, 12, -17.037)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform3#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform3#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform4" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform4" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -27)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform4#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform4#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
-[node name="platform1" type="StaticBody3D" parent="platformsHolder"]
+[node name="platformsHolder#platform1" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform1#CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ihfcg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="platformsHolder_platform1#MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rka8t")
 skeleton = NodePath("../../..")
 
