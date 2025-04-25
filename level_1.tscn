@@ -1,13 +1,11 @@
-[gd_scene load_steps=22 format=4 uid="uid://5rrb5i480w3m"]
+[gd_scene load_steps=27 format=4 uid="uid://5rrb5i480w3m"]
 
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
-[ext_resource type="PackedScene" uid="uid://dtwd40hjp4wqu" path="res://deadblock.tscn" id="2_5hph3"]
 [ext_resource type="MeshLibrary" uid="uid://weyop0l80uva" path="res://roadblocks.tres" id="2_hbghi"]
 [ext_resource type="MeshLibrary" uid="uid://eml2iwqtyj1u" path="res://newblocklib.tres" id="2_rka8t"]
 [ext_resource type="MeshLibrary" uid="uid://djlgvil5r0hnc" path="res://block2.tres" id="3_hn12h"]
 [ext_resource type="Texture2D" uid="uid://cu7oxnwil41vv" path="res://texture/kennytexture/Models/GLB format/Textures/truck.png" id="4_ihfcg"]
-[ext_resource type="PackedScene" path="res://goal.tscn" id="5_5hph3"]
-[ext_resource type="Script" path="res://goal.gd" id="6_bjebc"]
+[ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="6_j7kpp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
 
@@ -128,11 +126,32 @@ _data = {
 &"new_animation": SubResource("Animation_5hph3")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rft7"]
+albedo_color = Color(0.980392, 0.976471, 0, 1)
+emission_enabled = true
+emission = Color(0.619608, 0.478431, 0, 1)
+emission_energy_multiplier = 16.0
+ao_light_affect = 0.81
+refraction_scale = 0.35
+
+[sub_resource type="BoxMesh" id="BoxMesh_mp81a"]
+material = SubResource("StandardMaterial3D_7rft7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5rr72"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7kpp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyffv"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_bjebc"]
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5rr72"]
 size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5hph3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1pe0h"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -196,14 +215,41 @@ libraries = {
 }
 autoplay = "RESET"
 
-[node name="deadblock2" parent="." instance=ExtResource("2_5hph3")]
+[node name="deadblock2" type="Area3D" parent="."]
 transform = Transform3D(-0.502289, 0.000700111, 0.0548942, 0.000128652, 2.16369, 0.0118191, -0.00358624, -0.00656397, -2.78931, 4.28224, 9.02977, -3.86471)
+script = ExtResource("6_j7kpp")
 
-[node name="deadblock" parent="." instance=ExtResource("2_5hph3")]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock2"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock2"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_5rr72")
+
+[node name="deadblock" type="Area3D" parent="."]
 transform = Transform3D(0.00522482, -0.00831703, 2.73433, -0.00406046, 2.75562, 0.00831195, -0.99471, -0.0113032, 0.014344, -1.65846, 9.74481, 11.7373)
+script = ExtResource("6_j7kpp")
 
-[node name="deadblock3" parent="." instance=ExtResource("2_5hph3")]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_j7kpp")
+
+[node name="deadblock3" type="Area3D" parent="."]
 transform = Transform3D(0.0176079, -6.56523e-08, -1.65728, 0.0364714, 0.993553, 0.000305041, 1.86719, -0.0194068, 0.0156225, -10.0177, 10.3084, -0.0156312)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock3"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock3"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_gyffv")
 
 [node name="platformsHolder" type="Node3D" parent="."]
 transform = Transform3D(-0.0137178, 0, -0.999906, 0, 1, 0, 0.999906, 0, -0.0137178, 9.62512, 5.66484, -8.8442)
@@ -358,12 +404,45 @@ shape = SubResource("BoxShape3D_bjebc")
 mesh = SubResource("BoxMesh_5rr72")
 skeleton = NodePath("../../..")
 
-[node name="goal" parent="." instance=ExtResource("5_5hph3")]
+[node name="goal" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(-0.0137178, 0, -0.999906, 0, 1, 0, 0.999906, 0, -0.0137178, 3.38787, 55.2321, -53.7933)
-script = ExtResource("6_bjebc")
+script = null
 
-[node name="deadblock6" parent="." instance=ExtResource("2_5hph3")]
+[node name="deadblock6" type="Area3D" parent="."]
 transform = Transform3D(-0.0137178, 0, -0.999906, 0, 1, 0, 0.999906, 0, -0.0137178, 31.7042, 19.1784, -5.45943)
+script = ExtResource("6_j7kpp")
 
-[node name="deadblock5" parent="." instance=ExtResource("2_5hph3")]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock6"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock6"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_5hph3")
+
+[node name="deadblock5" type="Area3D" parent="."]
 transform = Transform3D(0.526748, 0, 0.850021, 0, 1, 0, -0.850021, 0, 0.526748, 52.2971, 41.4487, -53.6876)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock5"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock5"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_1pe0h")
+
+[connection signal="body_entered" from="deadblock2" to="deadblock2" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock" to="deadblock" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock3" to="deadblock3" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock6" to="deadblock6" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock5" to="deadblock5" method="_on_body_entered"]
