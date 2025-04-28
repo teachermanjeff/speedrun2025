@@ -54,7 +54,7 @@ mesh = ExtResource("4_n7ypv")
 shape = SubResource("ConcavePolygonShape3D_7j8ne")
 
 [node name="fallzone" type="Area3D" parent="."]
-transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -646, 0)
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -546.009, 0)
 script = ExtResource("6_0s5r2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fallzone"]
