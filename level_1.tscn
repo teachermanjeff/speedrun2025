@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://c03t5b1uk4kh8"]
+[gd_scene load_steps=28 format=4 uid="uid://c03t5b1uk4kh8"]
 
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
 [ext_resource type="MeshLibrary" uid="uid://weyop0l80uva" path="res://roadblocks.tres" id="2_hbghi"]
@@ -6,6 +6,7 @@
 [ext_resource type="MeshLibrary" uid="uid://djlgvil5r0hnc" path="res://block2.tres" id="3_hn12h"]
 [ext_resource type="Texture2D" uid="uid://cu7oxnwil41vv" path="res://texture/kennytexture/Models/GLB format/Textures/truck.png" id="4_ihfcg"]
 [ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="6_j7kpp"]
+[ext_resource type="Environment" uid="uid://mx4p5ae66r83" path="res://environment.tres" id="7_j7kpp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
 
@@ -156,7 +157,11 @@ size = Vector3(5, 1, 5)
 [node name="Node3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.984971, 0.0238768, 0.171062, -0.17272, 0.136162, 0.975514, 7.16111e-10, -0.990399, 0.13824, 0, 14.4292, 0.0471553)
+transform = Transform3D(0.984971, 0.0238767, 0.171062, -0.17272, 0.136162, 0.975514, 7.16111e-10, -0.990399, 0.13824, -15.9437, 30.0054, 13.6153)
+light_energy = 1.197
+light_indirect_energy = 2.28
+light_volumetric_fog_energy = 2.89
+sky_mode = 1
 
 [node name="ball" parent="." instance=ExtResource("1_3hls8")]
 transform = Transform3D(-0.991211, 0, -0.132291, 0.0322639, 0.969804, -0.241742, 0.128296, -0.243886, -0.96128, 0, 1.58143, 0)
@@ -404,21 +409,11 @@ shape = SubResource("BoxShape3D_bjebc")
 mesh = SubResource("BoxMesh_5rr72")
 skeleton = NodePath("../../..")
 
-[node name="goal" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(-0.0137178, 0, -0.999906, 0, 1, 0, 0.999906, 0, -0.0137178, 3.38787, 55.2321, -53.7933)
-script = null
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("7_j7kpp")
 
 [node name="deadblock6" type="Area3D" parent="."]
-transform = Transform3D(-0.0137178, 0, -0.999906, 0, 1, 0, 0.999906, 0, -0.0137178, 31.7042, 19.1784, -5.45943)
+transform = Transform3D(0.662088, 0, -3.66339, 0, 3.08508, 0, 2.04182, 0, 1.1879, 30.9076, 19.1784, -5.68005)
 script = ExtResource("6_j7kpp")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock6"]
@@ -430,7 +425,7 @@ transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0,
 shape = SubResource("BoxShape3D_5hph3")
 
 [node name="deadblock5" type="Area3D" parent="."]
-transform = Transform3D(0.526748, 0, 0.850021, 0, 1, 0, -0.850021, 0, 0.526748, 52.2971, 41.4487, -53.6876)
+transform = Transform3D(1.30825, 0, 0.896935, 0, 1.90605, 0, -2.11115, 0, 0.55582, 52.2971, 40.6854, -53.6876)
 script = ExtResource("6_j7kpp")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock5"]
