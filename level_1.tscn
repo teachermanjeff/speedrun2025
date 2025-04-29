@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c03t5b1uk4kh8"]
+[gd_scene load_steps=29 format=4 uid="uid://c03t5b1uk4kh8"]
 
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
 [ext_resource type="MeshLibrary" uid="uid://weyop0l80uva" path="res://roadblocks.tres" id="2_hbghi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cu7oxnwil41vv" path="res://texture/kennytexture/Models/GLB format/Textures/truck.png" id="4_ihfcg"]
 [ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="6_j7kpp"]
 [ext_resource type="Environment" uid="uid://mx4p5ae66r83" path="res://environment.tres" id="7_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://dtk0jg24tbdef" path="res://goal.tscn" id="8_bjebc"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
 
@@ -435,6 +436,9 @@ mesh = SubResource("BoxMesh_mp81a")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock5"]
 transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
 shape = SubResource("BoxShape3D_1pe0h")
+
+[node name="gaolLv1" parent="." instance=ExtResource("8_bjebc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29823, 55.8524, -54.0932)
 
 [connection signal="body_entered" from="deadblock2" to="deadblock2" method="_on_body_entered"]
 [connection signal="body_entered" from="deadblock" to="deadblock" method="_on_body_entered"]
