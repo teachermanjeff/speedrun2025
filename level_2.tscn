@@ -50,6 +50,8 @@ mesh = ExtResource("4_n7ypv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CottageObj/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_7j8ne")
+<<<<<<< HEAD
+=======
 
 [node name="fallzone1" type="Area3D" parent="."]
 transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -646, 0)
@@ -65,4 +67,4 @@ transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -646, 0)
 shape = SubResource("BoxShape3D_7j8ne")
 
 [connection signal="body_entered" from="fallzone1" to="fallzone1" method="_on_body_entered"]
-
+>>>>>>> 676a2a7a46ed22c255c272356391167345c229a6
