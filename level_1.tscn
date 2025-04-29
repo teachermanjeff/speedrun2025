@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="6_j7kpp"]
 [ext_resource type="Environment" uid="uid://mx4p5ae66r83" path="res://environment.tres" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://dtk0jg24tbdef" path="res://goal.tscn" id="8_bjebc"]
-[ext_resource type="Script" uid="uid://hfecourndy60" path="res://goalLv1.gd" id="9_5rr72"]
+[ext_resource type="Script" path="res://goalLv1.gd" id="9_5rr72"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
 

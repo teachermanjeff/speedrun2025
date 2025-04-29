@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://dgfgjaikbj4kf"]
+[gd_scene load_steps=14 format=4 uid="uid://06gep1n1ndsj"]
 
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
-[ext_resource type="Script" uid="uid://dbocg28d10yqq" path="res://level_1.gd" id="1_rka8t"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_rka8t"]
 [ext_resource type="MeshLibrary" uid="uid://djlgvil5r0hnc" path="res://block2.tres" id="3_hn12h"]
 [ext_resource type="Texture2D" uid="uid://cu7oxnwil41vv" path="res://texture/kennytexture/Models/GLB format/Textures/truck.png" id="4_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://dtk0jg24tbdef" path="res://goal.tscn" id="5_5hph3"]
-[ext_resource type="Script" uid="uid://4u4njqxk0041" path="res://goal.gd" id="6_bjebc"]
+[ext_resource type="Script" path="res://goal.gd" id="6_bjebc"]
 [ext_resource type="PackedScene" uid="uid://dtwd40hjp4wqu" path="res://deadblock.tscn" id="6_j7kpp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbde2"]

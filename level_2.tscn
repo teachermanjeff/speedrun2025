@@ -1,12 +1,40 @@
-[gd_scene load_steps=13 format=3 uid="uid://ulafrbw7hmk6"]
+[gd_scene load_steps=24 format=3 uid="uid://ulafrbw7hmk6"]
 
-[ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="2_xdadj"]
+[ext_resource type="Script" uid="uid://dydb1lxv1optr" path="res://player2.gd" id="1_5hnhx"]
+[ext_resource type="Texture2D" uid="uid://d2m4d62fq1oft" path="res://texture/ground texture/card/Stylized_Card_001_basecolor.png" id="2_78pok"]
 [ext_resource type="Texture2D" uid="uid://ccbcojfg18elk" path="res://cottage_diffuse.png" id="3_1y8me"]
+[ext_resource type="Texture2D" uid="uid://csrdv1v42orgo" path="res://texture/ground texture/card/Stylized_Card_001_ambientOcclusion.png" id="3_lvfll"]
 [ext_resource type="MeshLibrary" uid="uid://d1p7alkks1xsb" path="res://stuff for level 2 .tres" id="3_n7ypv"]
 [ext_resource type="Texture2D" uid="uid://c5guimhhxby3e" path="res://aerial-drone-panorama-view-chisinau-sunset-multiple-office-residential-buildings-roads-with-multiple-cars.jpg" id="3_xdadj"]
+[ext_resource type="Texture2D" uid="uid://du0imxg3l20mw" path="res://texture/ground texture/card/Stylized_Card_001_emissive.png" id="4_jcnlr"]
 [ext_resource type="ArrayMesh" uid="uid://dt67dnv7chk78" path="res://cottage_obj.obj" id="4_n7ypv"]
-[ext_resource type="PackedScene" path="res://teleportation.tscn" id="6_0s5r2"]
+[ext_resource type="Texture2D" uid="uid://diddstxnu6anm" path="res://texture/ground texture/card/Stylized_Card_001_height.png" id="5_5kfcu"]
+[ext_resource type="PackedScene" uid="uid://bnrhrihxfwiu6" path="res://teleportation.tscn" id="6_0s5r2"]
+[ext_resource type="Texture2D" uid="uid://di5o1x7a3mt70" path="res://texture/ground texture/card/Stylized_Card_001_metallic.png" id="6_i558w"]
 [ext_resource type="PackedScene" uid="uid://dtwd40hjp4wqu" path="res://deadblock.tscn" id="7_7j8ne"]
+[ext_resource type="Texture2D" uid="uid://bmrsrg1sm48k1" path="res://texture/ground texture/card/Stylized_Card_001_normal.png" id="7_cuxq2"]
+[ext_resource type="Texture2D" uid="uid://do4il23plm0hv" path="res://texture/ground texture/card/Stylized_Card_001_roughness.png" id="8_wvr33"]
+[ext_resource type="Texture2D" uid="uid://c6au0t2xu60x1" path="res://texture/ground texture/card/Stylized_Card_001_translucency.png" id="9_sgm4o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kpjcp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv870"]
+albedo_texture = ExtResource("2_78pok")
+metallic = 1.0
+metallic_texture = ExtResource("6_i558w")
+roughness_texture = ExtResource("8_wvr33")
+emission_enabled = true
+emission_texture = ExtResource("4_jcnlr")
+normal_enabled = true
+normal_texture = ExtResource("7_cuxq2")
+ao_enabled = true
+ao_texture = ExtResource("3_lvfll")
+heightmap_enabled = true
+heightmap_texture = ExtResource("5_5kfcu")
+subsurf_scatter_enabled = true
+subsurf_scatter_texture = ExtResource("9_sgm4o")
+
+[sub_resource type="SphereMesh" id="SphereMesh_kne1u"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1y8me"]
 panorama = ExtResource("3_xdadj")
@@ -26,8 +54,19 @@ data = PackedVector3Array(63.1963, 0.0776, 63.1963, -63.1963, 0.0776, 63.1963, 6
 
 [node name="level_2" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("2_xdadj")]
+[node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73085, 18.204, 32.0389)
+script = ExtResource("1_5hnhx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("SphereShape3D_kpjcp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+material_override = SubResource("StandardMaterial3D_rv870")
+mesh = SubResource("SphereMesh_kne1u")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.894365, 0.447337, 0, -0.447337, 0.894365, 0, 1.13313, 1.56175)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0s5r2")
