@@ -1,13 +1,13 @@
 extends CharacterBody3D
 
 const  ROLLspeed = deg_to_rad(5)
-var speed = 100
+var speed = 10
 # Called when the node enters the scene tree for the first time.
-const jumpspeed = 1000
-const gravity = 10
-var sensitivity =200
-var double_jump = .1
-var time_for_doublejump = 100
+const jumpspeed = 30
+const gravity = 2
+var sensitivity = 100
+var double_jump = 1
+var time_for_doublejump = 3
 
 
 func _on_timer_timeout():
