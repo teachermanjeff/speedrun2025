@@ -55,5 +55,15 @@ shape = SubResource("ConcavePolygonShape3D_7j8ne")
 [node name="teleportation" parent="." instance=ExtResource("6_0s5r2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 274.221, 3.80984, -91.3156)
 
-[node name="teleportation2" parent="." instance=ExtResource("6_0s5r2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.919, 3.27665, -54.83)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fallzone1"]
+shape = SubResource("BoxShape3D_7j8ne")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -646, 0)
+shape = SubResource("BoxShape3D_7j8ne")
+
+[connection signal="body_entered" from="fallzone1" to="fallzone1" method="_on_body_entered"]
+

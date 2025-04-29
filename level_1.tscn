@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://c03t5b1uk4kh8"]
+[gd_scene load_steps=30 format=4 uid="uid://c03t5b1uk4kh8"]
 
 [ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
 [ext_resource type="MeshLibrary" uid="uid://weyop0l80uva" path="res://roadblocks.tres" id="2_hbghi"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="6_j7kpp"]
 [ext_resource type="Environment" uid="uid://mx4p5ae66r83" path="res://environment.tres" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://dtk0jg24tbdef" path="res://goal.tscn" id="8_bjebc"]
+[ext_resource type="Script" uid="uid://hfecourndy60" path="res://goalLv1.gd" id="9_5rr72"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
 
@@ -439,9 +440,11 @@ shape = SubResource("BoxShape3D_1pe0h")
 
 [node name="gaolLv1" parent="." instance=ExtResource("8_bjebc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29823, 55.8524, -54.0932)
+script = ExtResource("9_5rr72")
 
 [connection signal="body_entered" from="deadblock2" to="deadblock2" method="_on_body_entered"]
 [connection signal="body_entered" from="deadblock" to="deadblock" method="_on_body_entered"]
 [connection signal="body_entered" from="deadblock3" to="deadblock3" method="_on_body_entered"]
 [connection signal="body_entered" from="deadblock6" to="deadblock6" method="_on_body_entered"]
 [connection signal="body_entered" from="deadblock5" to="deadblock5" method="_on_body_entered"]
+[connection signal="body_entered" from="gaolLv1" to="gaolLv1" method="_on_body_entered"]

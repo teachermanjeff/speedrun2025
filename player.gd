@@ -70,7 +70,7 @@ func _process(_delta):
 		velocity.x = 0
 	
 	
-	if position.y < -10:
+	if position.y < -50:
 		
 		get_tree().reload_current_scene()
 	
