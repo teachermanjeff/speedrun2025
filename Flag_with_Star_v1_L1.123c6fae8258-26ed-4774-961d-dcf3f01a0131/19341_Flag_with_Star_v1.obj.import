@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3b51id5s3u4j"
+path="res://.godot/imported/19341_Flag_with_Star_v1.obj-a04601a5335ed918d2f3e7d49749cae7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/19341_Flag_with_Star_v1.obj-a04601a5335ed918d2f3e7d49749cae7.mesh"]
+
+source_file="res://Flag_with_Star_v1_L1.123c6fae8258-26ed-4774-961d-dcf3f01a0131/19341_Flag_with_Star_v1.obj"
+dest_files=["res://.godot/imported/19341_Flag_with_Star_v1.obj-a04601a5335ed918d2f3e7d49749cae7.mesh", "res://.godot/imported/19341_Flag_with_Star_v1.obj-a04601a5335ed918d2f3e7d49749cae7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

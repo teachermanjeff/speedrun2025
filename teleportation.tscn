@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnrhrihxfwiu6"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3b51id5s3u4j" path="res://Flag_with_Star_v1_L1.123c6fae8258-26ed-4774-961d-dcf3f01a0131/19341_Flag_with_Star_v1.obj" id="1_u3ses"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_id6rg"]
+size = Vector3(2, 1, 1)
+
+[node name="teleportation" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_id6rg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0)
+mesh = ExtResource("1_u3ses")

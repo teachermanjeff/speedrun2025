@@ -1,0 +1,450 @@
+[gd_scene load_steps=30 format=4 uid="uid://c03t5b1uk4kh8"]
+
+[ext_resource type="PackedScene" uid="uid://dnoriaxlgjdbq" path="res://Player.tscn" id="1_3hls8"]
+[ext_resource type="MeshLibrary" uid="uid://weyop0l80uva" path="res://roadblocks.tres" id="2_hbghi"]
+[ext_resource type="MeshLibrary" uid="uid://eml2iwqtyj1u" path="res://newblocklib.tres" id="2_rka8t"]
+[ext_resource type="MeshLibrary" uid="uid://djlgvil5r0hnc" path="res://block2.tres" id="3_hn12h"]
+[ext_resource type="Texture2D" uid="uid://cu7oxnwil41vv" path="res://texture/kennytexture/Models/GLB format/Textures/truck.png" id="4_ihfcg"]
+[ext_resource type="Script" uid="uid://dq5b7txhyuhup" path="res://deadblock.gd" id="6_j7kpp"]
+[ext_resource type="Environment" uid="uid://mx4p5ae66r83" path="res://environment.tres" id="7_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://dtk0jg24tbdef" path="res://goal.tscn" id="8_bjebc"]
+[ext_resource type="Script" path="res://goalLv1.gd" id="9_5rr72"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3hls8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hn12h"]
+absorbent = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbghi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbde2"]
+resource_name = "truck"
+shading_mode = 0
+albedo_texture = ExtResource("4_ihfcg")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xwauy"]
+_surfaces = [{
+"aabb": AABB(-0.415, 0, -0.8217, 0.83, 1.00596, 1.6434),
+"format": 34896613377,
+"index_count": 144,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAQADAAQAAAAFAAMABAADAAUABQAAAAYABQAHAAQABwAFAAYAAAAIAAYAAgAJAAAAAAAJAAgACQACAAoACgALAAkADAAKAAIACQALAA0ADQALAAoADQAIAAkACgAMAA0ADgAMAAIADQAMAA4ADgAIAA0ADgACAAEACAAOAA8ADwAOAAEADwAGAAgABAAPAAEAEAAGAA8ABwAGABAADwARABAAEQAPAAQAEAARABIAEgARAAQAEgATABAABwAQABMAFAASAAQAEwASABQABwATABUAFAAVABMAFgAHABUABAAHABYAFwAVABQAFQAXABYAFAAEABgAFgAYAAQAFAAZABcAFgAXABkAGAAZABQAGQAYABYA"),
+"name": "truck",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 26,
+"vertex_data": PackedByteArray("//8AAKzfAAAAAAAArN8AAAAAuBSs3wAAAAAAALwdAAAAALgUvB0AAP//AAC8HQAA/////0knAAD//7gUvB0AAP////8FSgAA//+4FKzfAAAAALgU//8AAP//uBT//wAAAAD/////AAD///////8AAAAA//8FSgAAAAD//0knAAD//4DSwBkAAAAAgNLAGQAAAACA0g8UAAD//4DSDxQAAAAAbMZqCwAA//9sxmoLAAD//7gUAAAAAP//GIgAAAAAAAC4FAAAAAAAABiIAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j6086"]
+resource_name = "truck-grey_truck-grey"
+_surfaces = [{
+"aabb": AABB(-0.415, 0, -0.8217, 0.83, 1.00596, 1.6434),
+"attribute_data": PackedByteArray("/Jttvk+Obb5Pjme8/JtnvORzQ7zkcyerc3snq3N7Q7xHJQVn9AQFZ/QE1GOMBps/VgybP0oEnEZHJdRjqiqbP6oq1GNXA5xG5wF4SAAA1GMAABFSj2ZnvI9mhr46WIa+OlhnvLVjO6tfVTurX1VHqrVjR6pHJdRjqirUY6oqmz9WDJs/RyUFZ4wGmz/0BAVn9ATUY0oEnEZXA5xG5wF4SAAA1GMAABFStWPMs7Vjnb9fVZ2/X1XMs7VjIq1fVSKtX1U7q7VjO6uXX8uol1/Wqy5X1qsuV8uoqmbMv1RYzL9UWNO6qmbTui2c+6ctnPm+f475vn+O+6fBjfm6bpv5um6bI8DBjSPAH1+Xq+xWl6vsVkWoH19FqEoMGhtKDAAAkCUAAJAlGhs="),
+"format": 34896613399,
+"index_count": 144,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgACwAMAAgADQALAAoADAAOAAgADAAPAA4ADwAQAA4AEQANAAoAEgARAAoAEgAKABMAEwAUABIAFQAWABcAFwAYABUAGQAaABsAGwAcABkAHQAeAB8AHwAgAB0AIQAdACAAIQAgACIAIwAhACIAJAAjACIAJAAiACUAJAAlACYAJAAmACcAKAAkACcAJwApACgAKgArACwALAAtACoALgAqAC0ALQAvAC4ALgAvADAAMAAxAC4AMgAzADQANAA1ADIANgA3ADgAOAA5ADYAOgA7ADwAPAA9ADoAPgA/AEAAQABBAD4AQgBDAEQARABFAEIARgBHAEgASABJAEYA"),
+"material": SubResource("StandardMaterial3D_tbde2"),
+"name": "truck",
+"primitive": 3,
+"uv_scale": Vector4(6, 3.97556, 0, 0),
+"vertex_count": 74,
+"vertex_data": PackedByteArray("//8AAKzfAIAAAAAArN8AgAAAuBSs3wCA//+4FKzfAID//wAArN//////AAC8Hf//AAAAALwd//8AAAAArN///wAAAACs3/+/AAAAALwd/78AALgUvB3/vwAA//9JJ/+/AAD//wVK/78AAIDSwBn/vwAAuBSs3/+/AAD//////78AALgU////vwAAgNIPFP+/AABsxmoL/78AALgUAAD/vwAAGIgAAP+/AAC4FLwd//8AAAAAvB3/////AAC8Hf////+4FLwd//8AAIDSDxT/////gNIPFP////+A0sAZ//8AAIDSwBn/////uBSs3wAA//+4FP//AAD///////8AAP////8FSgAA//8AAKzfAAD/////SScAAP//AAC8HQAA//+4FLwdAAD//4DSwBkAAP//gNIPFAAA//9sxmoLAAD//7gUAAAAAP//GIgAAAAAAAAYiAAA//8AALgUAAD/////uBQAAP////8YiAAA//8AAGzGagv/////bMZqC/////+A0g8U//8AAIDSDxT//wAA//9JJ///AACA0sAZ/////4DSwBn///////9JJ///AAC4FLwd/////7gUvB3/////uBQAAP//AAC4FAAA//////////8AgP//uBT//wCAAAC4FP//AIAAAP////8AgAAAuBT///+///+4FP///7///7gUrN//vwAAuBSs3/+/AAD//0kn////////SSf///////8FSv//AAD//wVK//8AAP//BUpU1f////8FSlTV////////VNUAAP////9U1f9/////f////3////9/////f/8//3//P/9//z//f/8//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f/+//3//v/9//7//f/+//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/9/T/f/f////3////9/T/f/f7Pi/3+z4v9/odf/f6HX/39f0v9/DOj/fwzo/39f0v9//z//f/8//3//P/9//z//f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9/X9L/f1/S/3//v/9//7+qqqqqqqqqqqqqqqqqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xwauy")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rka8t"]
+data = PackedVector3Array(0.415, 0, 0.6142, -0.415, 0, 0.6142, -0.415, 0.0814, 0.6142, -0.415, 0.0814, 0.6142, 0.415, 0.0814, 0.6142, 0.415, 0, 0.6142, 0.415, 0, 0.6142, 0.415, 0, -0.6308, -0.415, 0, -0.6308, -0.415, 0, -0.6308, -0.415, 0, 0.6142, 0.415, 0, 0.6142, -0.415, 0, 0.6142, -0.415, 0, -0.6308, -0.415, 0.0814, -0.6308, -0.415, 0.0814, -0.6308, -0.415, 1.006, -0.5695, -0.415, 0, 0.6142, -0.415, 1.006, -0.5695, -0.415, 1.006, -0.3465, -0.415, 0, 0.6142, -0.415, 0.8272, -0.6564, -0.415, 1.006, -0.5695, -0.415, 0.0814, -0.6308, -0.415, 1.006, -0.3465, -0.415, 0.0814, 0.6142, -0.415, 0, 0.6142, -0.415, 1.006, -0.3465, -0.415, 1.006, 0.8217, -0.415, 0.0814, 0.6142, -0.415, 1.006, 0.8217, -0.415, 0.0814, 0.8217, -0.415, 0.0814, 0.6142, -0.415, 0.8272, -0.6929, -0.415, 0.8272, -0.6564, -0.415, 0.0814, -0.6308, -0.415, 0.7797, -0.7484, -0.415, 0.8272, -0.6929, -0.415, 0.0814, -0.6308, -0.415, 0.7797, -0.7484, -0.415, 0.0814, -0.6308, -0.415, 0.0814, -0.8217, -0.415, 0.0814, -0.8217, -0.415, 0.5348, -0.8217, -0.415, 0.7797, -0.7484, -0.415, 0.0814, -0.6308, -0.415, 0, -0.6308, 0.415, 0, -0.6308, 0.415, 0, -0.6308, 0.415, 0.0814, -0.6308, -0.415, 0.0814, -0.6308, -0.415, 0.8272, -0.6929, 0.415, 0.8272, -0.6929, 0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6564, -0.415, 0.8272, -0.6564, -0.415, 0.8272, -0.6929, 0.415, 0.0814, 0.6142, 0.415, 0.0814, 0.8217, 0.415, 1.006, 0.8217, 0.415, 1.006, 0.8217, 0.415, 1.006, -0.3465, 0.415, 0.0814, 0.6142, 0.415, 0, 0.6142, 0.415, 0.0814, 0.6142, 0.415, 1.006, -0.3465, 0.415, 0, 0.6142, 0.415, 1.006, -0.3465, 0.415, 1.006, -0.5695, 0.415, 0, -0.6308, 0.415, 0, 0.6142, 0.415, 1.006, -0.5695, 0.415, 0.0814, -0.6308, 0.415, 0, -0.6308, 0.415, 1.006, -0.5695, 0.415, 0.0814, -0.6308, 0.415, 1.006, -0.5695, 0.415, 0.8272, -0.6564, 0.415, 0.0814, -0.6308, 0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6929, 0.415, 0.0814, -0.6308, 0.415, 0.8272, -0.6929, 0.415, 0.7797, -0.7484, 0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.6308, 0.415, 0.7797, -0.7484, 0.415, 0.7797, -0.7484, 0.415, 0.5348, -0.8217, 0.415, 0.0814, -0.8217, -0.415, 0.5348, -0.8217, -0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.8217, 0.415, 0.5348, -0.8217, -0.415, 0.5348, -0.8217, -0.415, 0.7797, -0.7484, -0.415, 0.5348, -0.8217, 0.415, 0.5348, -0.8217, 0.415, 0.5348, -0.8217, 0.415, 0.7797, -0.7484, -0.415, 0.7797, -0.7484, -0.415, 0.7797, -0.7484, 0.415, 0.7797, -0.7484, 0.415, 0.8272, -0.6929, 0.415, 0.8272, -0.6929, -0.415, 0.8272, -0.6929, -0.415, 0.7797, -0.7484, -0.415, 1.006, -0.5695, -0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6564, 0.415, 0.8272, -0.6564, 0.415, 1.006, -0.5695, -0.415, 1.006, -0.5695, -0.415, 0.0814, -0.6308, 0.415, 0.0814, -0.6308, 0.415, 0.0814, -0.8217, 0.415, 0.0814, -0.8217, -0.415, 0.0814, -0.8217, -0.415, 0.0814, -0.6308, 0.415, 1.006, 0.8217, 0.415, 0.0814, 0.8217, -0.415, 0.0814, 0.8217, -0.415, 0.0814, 0.8217, -0.415, 1.006, 0.8217, 0.415, 1.006, 0.8217, -0.415, 0.0814, 0.8217, 0.415, 0.0814, 0.8217, 0.415, 0.0814, 0.6142, 0.415, 0.0814, 0.6142, -0.415, 0.0814, 0.6142, -0.415, 0.0814, 0.8217, -0.415, 1.006, -0.5695, 0.415, 1.006, -0.5695, 0.415, 1.006, -0.3465, 0.415, 1.006, -0.3465, -0.415, 1.006, -0.3465, -0.415, 1.006, -0.5695, -0.415, 1.006, -0.3465, 0.415, 1.006, -0.3465, 0.415, 1.006, 0.8217, 0.415, 1.006, 0.8217, -0.415, 1.006, 0.8217, -0.415, 1.006, -0.3465)
+
+[sub_resource type="Animation" id="Animation_j7kpp"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deadblock")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.65846, 9.74481, 11.7373, 1, 1, -1.65846, 6.83714, 11.7373, 2, 1, -1.65846, 9.74481, 11.7373)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("deadblock2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 4.28224, 9.02977, -3.86471, 1, 1, 4.28224, 9.98699, -3.86471)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("deadblock3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.533333, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.000184053, -1.56137, 0.0195294), Vector3(-0.00942138, -1.57105, 1.59762), Vector3(0.0002175, -1.57997, -3.13265)]
+}
+
+[sub_resource type="Animation" id="Animation_bjebc"]
+resource_name = "deadblock"
+length = 7.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deadblock")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.65846, 9.74481, 11.7373, 2.96667, 1, -1.65846, 6.479, 11.7373, 7, 1, -1.65846, 9.87947, 11.7373)
+
+[sub_resource type="Animation" id="Animation_5hph3"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deadblock:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.65846, 10.9491, 11.7373), Vector3(-1.65846, 7.21259, 11.7373), Vector3(-1.65846, 10.9491, 11.7373), Vector3(-1.65846, 7.21259, 11.7373)]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("deadblock2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 4.28224, 9.99935, -3.86471, 0.933333, 1, 4.28224, 9.01857, -3.86471, 1.93333, 1, 4.28224, 9.01857, -3.86471, 2.4, 1, 4.28224, 9.99935, -3.86471)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5rr72"]
+_data = {
+&"RESET": SubResource("Animation_j7kpp"),
+&"deadblock": SubResource("Animation_bjebc"),
+&"new_animation": SubResource("Animation_5hph3")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rft7"]
+albedo_color = Color(0.980392, 0.976471, 0, 1)
+emission_enabled = true
+emission = Color(0.619608, 0.478431, 0, 1)
+emission_energy_multiplier = 16.0
+ao_light_affect = 0.81
+refraction_scale = 0.35
+
+[sub_resource type="BoxMesh" id="BoxMesh_mp81a"]
+material = SubResource("StandardMaterial3D_7rft7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5rr72"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7kpp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyffv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bjebc"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5rr72"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5hph3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1pe0h"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.984971, 0.0238767, 0.171062, -0.17272, 0.136162, 0.975514, 7.16111e-10, -0.990399, 0.13824, -15.9437, 30.0054, 13.6153)
+light_energy = 1.197
+light_indirect_energy = 2.28
+light_volumetric_fog_energy = 2.89
+sky_mode = 1
+
+[node name="ball" parent="." instance=ExtResource("1_3hls8")]
+transform = Transform3D(-0.991211, 0, -0.132291, 0.0322639, 0.969804, -0.241742, 0.128296, -0.243886, -0.96128, 0, 1.58143, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.25e+08, 0, 0, 0, 0, 0, 0, 0, 1.25e+08, 0, 0, 0)
+mesh = SubResource("BoxMesh_3hls8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(6.25e+10, 0, 0, 0, 0, 0, 0, 0, 6.25e+10, 0, 0, -7.932e+08)
+physics_material_override = SubResource("PhysicsMaterial_hn12h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1.5625e+16, 0, 0, 0, 0, 0, 0, 0, 1.5625e+16, 0, 0, 0)
+shape = SubResource("BoxShape3D_hbghi")
+
+[node name="jumpping blocks" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25897, 1.90064, -0.363341)
+mesh_library = ExtResource("2_rka8t")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(11, 65534, 1114113, 11, 65535, 1114113, 65547, 65533, 1114113, 327685, 65532, 1310721, 327686, 65532, 131073, 393221, 65532, 131073, 458757, 65532, 131073, 589823, 65532, 1114112, 589821, 65532, 1245184, 655356, 65532, 1179648, 589819, 65532, 196608, 524284, 65532, 131072, -196622, 4, 1441792, -65550, 4, 1310720, 65522, 4, 1310720, 196594, 4, 1179648, 327666, 4, 1179649, 458738, 4, 1179648, 327666, 3, 262144, 327666, 1, 262144, 327666, 5, 262144, 327666, 7, 262144, 262130, 4, 655360, 393202, 4, 655360, 327673, 11, 786433, 327673, 12, 786433, 327674, 12, 786433, 327674, 11, 786433, 393216, 12, 327681, 393216, 11, 327681, 393217, 11, 327681, 393217, 12, 327681)
+}
+metadata/_editor_floor_ = Vector3(0, 6, 0)
+
+[node name="ground" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.71915, 0)
+mesh_library = ExtResource("3_hn12h")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65523, 7, 524288, 65523, 6, 524288, 65523, 5, 524288, 65523, 4, 524288, 65523, 3, 524288, 65523, 2, 524288, 65523, 1, 524288, 65523, 0, 524288, 65523, 65535, 524288, 65523, 65534, 524288, 65523, 65533, 524288, 65523, 65532, 524288, 65523, 65530, 524288, 65523, 65529, 524288, 65524, 65529, 524288, 65525, 65529, 524288, 65526, 65529, 524288, 65527, 65529, 524288, 65528, 65529, 524288, 65529, 65529, 524288, 65530, 65529, 524288, 65531, 65529, 524288, 65532, 65529, 524288, 65533, 65529, 524288, 65534, 65529, 524288, 0, 65529, 524288, 1, 65529, 524288, 2, 65529, 524288, 3, 65529, 524288, 65526, 7, 524288, 65527, 7, 524288, 65528, 7, 524288, 65529, 7, 524288, 65530, 7, 524288, 65531, 7, 524288, 65532, 7, 524288, 65533, 7, 524288, 65534, 7, 524288, 65535, 7, 524288, 0, 7, 524288, 1, 7, 524288, 2, 7, 524288, 3, 7, 524288, 4, 7, 524288, 5, 7, 524288, 6, 7, 524288, 7, 7, 524288, 8, 65529, 524288, 8, 65531, 524288, 8, 65532, 524288, 8, 65533, 524288, 8, 65534, 524288, 8, 65535, 524288, 8, 0, 524288, 8, 1, 524288, 8, 2, 524288, 8, 3, 524288, 8, 4, 524288, 8, 5, 524288, 8, 7, 524288, 65517, 65526, 524288, 65517, 65527, 524288, 65517, 65528, 524288, 65517, 65529, 524288, 65517, 65530, 524288, 65517, 65531, 524288, 65517, 65532, 524288, 65517, 65533, 524288, 65517, 65534, 524288, 65517, 65535, 524288, 65517, 0, 524288, 65517, 1, 524288, 65517, 2, 524288, 65517, 3, 524288, 65517, 4, 524288, 65517, 5, 524288, 65517, 6, 524288, 65517, 7, 524288, 65517, 8, 524288, 65517, 9, 524288, 65517, 10, 524288, 65517, 11, 524288, 65517, 12, 524288, 65518, 65526, 524288, 65518, 65527, 524288, 65518, 65528, 524288, 65518, 65529, 524288, 65518, 65530, 524288, 65518, 65531, 524288, 65518, 65532, 524288, 65518, 65533, 524288, 65518, 65534, 524288, 65518, 65535, 524288, 65518, 0, 524288, 65518, 1, 524288, 65518, 2, 524288, 65518, 3, 524288, 65518, 4, 524288, 65518, 5, 524288, 65518, 6, 524288, 65518, 7, 524288, 65518, 8, 524288, 65518, 9, 524288, 65518, 10, 524288, 65518, 11, 524288, 65518, 12, 524288, 65519, 65526, 524288, 65519, 65527, 524288, 65519, 65528, 524288, 65519, 65529, 524288, 65519, 65530, 524288, 65519, 65531, 524288, 65519, 65532, 524288, 65519, 65533, 524288, 65519, 65534, 524288, 65519, 65535, 524288, 65519, 0, 524288, 65519, 1, 524288, 65519, 2, 524288, 65519, 3, 524288, 65519, 4, 524288, 65519, 5, 524288, 65519, 6, 524288, 65519, 7, 524288, 65519, 8, 524288, 65519, 9, 524288, 65519, 10, 524288, 65519, 11, 524288, 65519, 12, 524288, 65520, 65526, 524288, 65520, 65527, 524288, 65520, 65528, 524288, 65520, 65529, 524288, 65520, 65530, 524288, 65520, 65531, 524288, 65520, 65532, 524288, 65520, 65533, 524288, 65520, 65534, 524288, 65520, 65535, 524288, 65520, 0, 524288, 65520, 1, 524288, 65520, 2, 524288, 65520, 3, 524288, 65520, 4, 524288, 65520, 5, 524288, 65520, 6, 524288, 65520, 7, 524288, 65520, 8, 524288, 65520, 9, 524288, 65520, 10, 524288, 65520, 11, 524288, 65520, 12, 524288, 65521, 65526, 524288, 65521, 65527, 524288, 65521, 65528, 524288, 65521, 65529, 524288, 65521, 65530, 524288, 65521, 65531, 524288, 65521, 65532, 524288, 65521, 65533, 524288, 65521, 65534, 524288, 65521, 65535, 524288, 65521, 0, 524288, 65521, 1, 524288, 65521, 2, 524288, 65521, 3, 524288, 65521, 4, 524288, 65521, 5, 524288, 65521, 6, 524288, 65521, 7, 524288, 65521, 8, 524288, 65521, 9, 524288, 65521, 10, 524288, 65521, 11, 524288, 65521, 12, 524288, 65522, 65526, 524288, 65522, 65527, 524288, 65522, 65528, 524288, 65522, 65529, 524288, 65522, 65530, 524288, 65522, 65531, 524288, 65522, 65532, 524288, 65522, 65533, 524288, 65522, 65534, 524288, 65522, 65535, 524288, 65522, 0, 524288, 65522, 1, 524288, 65522, 2, 524288, 65522, 3, 524288, 65522, 4, 524288, 65522, 5, 524288, 65522, 6, 524288, 65522, 7, 524288, 65522, 8, 524288, 65522, 9, 524288, 65522, 10, 524288, 65522, 11, 524288, 65522, 12, 524288, 65523, 65526, 524288, 65523, 65527, 524288, 65523, 65528, 524288, 65523, 8, 524288, 65523, 9, 524288, 65523, 10, 524288, 65523, 11, 524288, 65523, 12, 524288, 65524, 65526, 524288, 65524, 65527, 524288, 65524, 65528, 524288, 65524, 8, 524288, 65524, 9, 524288, 65524, 10, 524288, 65524, 11, 524288, 65524, 12, 524288, 65525, 65526, 524288, 65525, 65527, 524288, 65525, 65528, 524288, 65525, 9, 524288, 65525, 10, 524288, 65525, 11, 524288, 65525, 12, 524288, 65526, 65526, 524288, 65526, 65527, 524288, 65526, 65528, 524288, 65526, 8, 524288, 65526, 9, 524288, 65526, 10, 524288, 65526, 11, 524288, 65526, 12, 524288, 65527, 65526, 524288, 65527, 65527, 524288, 65527, 65528, 524288, 65527, 8, 524288, 65527, 9, 524288, 65527, 10, 524288, 65527, 11, 524288, 65527, 12, 524288, 65528, 65526, 524288, 65528, 65527, 524288, 65528, 65528, 524288, 65528, 8, 524288, 65528, 9, 524288, 65528, 10, 524288, 65528, 11, 524288, 65528, 12, 524288, 65529, 65526, 524288, 65529, 65527, 524288, 65529, 65528, 524288, 65529, 8, 524288, 65529, 9, 524288, 65529, 10, 524288, 65529, 11, 524288, 65529, 12, 524288, 65530, 65526, 524288, 65530, 65527, 524288, 65530, 65528, 524288, 65530, 8, 524288, 65530, 9, 524288, 65530, 10, 524288, 65530, 11, 524288, 65530, 12, 524288, 65531, 65526, 524288, 65531, 65527, 524288, 65531, 65528, 524288, 65531, 8, 524288, 65531, 9, 524288, 65531, 10, 524288, 65531, 11, 524288, 65531, 12, 524288, 65532, 65526, 524288, 65532, 65527, 524288, 65532, 65528, 524288, 65532, 8, 524288, 65532, 9, 524288, 65532, 10, 524288, 65532, 11, 524288, 65532, 12, 524288, 65533, 65526, 524288, 65533, 65527, 524288, 65533, 65528, 524288, 65533, 8, 524288, 65533, 9, 524288, 65533, 10, 524288, 65533, 11, 524288, 65533, 12, 524288, 65534, 65526, 524288, 65534, 65527, 524288, 65534, 65528, 524288, 65534, 8, 524288, 65534, 9, 524288, 65534, 10, 524288, 65534, 11, 524288, 65534, 12, 524288, 65535, 65526, 524288, 65535, 65527, 524288, 65535, 65528, 524288, 65535, 8, 524288, 65535, 9, 524288, 65535, 10, 524288, 65535, 11, 524288, 65535, 12, 524288, 0, 65526, 524288, 0, 65527, 524288, 0, 65528, 524288, 0, 8, 524288, 0, 9, 524288, 0, 10, 524288, 0, 11, 524288, 0, 12, 524288, 1, 65526, 524288, 1, 65527, 524288, 1, 65528, 524288, 1, 8, 524288, 1, 9, 524288, 1, 10, 524288, 1, 11, 524288, 1, 12, 524288, 2, 65526, 524288, 2, 65527, 524288, 2, 65528, 524288, 2, 8, 524288, 2, 9, 524288, 2, 10, 524288, 2, 11, 524288, 2, 12, 524288, 3, 65526, 524288, 3, 65527, 524288, 3, 65528, 524288, 3, 8, 524288, 3, 9, 524288, 3, 10, 524288, 3, 11, 524288, 3, 12, 524288, 4, 65526, 524288, 4, 65527, 524288, 4, 65528, 524288, 4, 8, 524288, 4, 9, 524288, 4, 10, 524288, 4, 11, 524288, 4, 12, 524288, 5, 65526, 524288, 5, 65527, 524288, 5, 65528, 524288, 5, 8, 524288, 5, 9, 524288, 5, 10, 524288, 5, 11, 524288, 5, 12, 524288, 6, 65526, 524288, 6, 65527, 524288, 6, 65528, 524288, 6, 8, 524288, 6, 9, 524288, 6, 10, 524288, 6, 11, 524288, 6, 12, 524288, 7, 65526, 524288, 7, 65527, 524288, 7, 65528, 524288, 7, 8, 524288, 7, 9, 524288, 7, 10, 524288, 7, 11, 524288, 7, 12, 524288, 8, 65526, 524288, 8, 65527, 524288, 8, 65528, 524288, 8, 8, 524288, 8, 9, 524288, 8, 10, 524288, 8, 11, 524288, 8, 12, 524288, 9, 65526, 524288, 9, 65527, 524288, 9, 65528, 524288, 9, 65529, 524288, 9, 65530, 524288, 9, 65531, 524288, 9, 65532, 524288, 9, 65533, 524288, 9, 65534, 524288, 9, 65535, 524288, 9, 0, 524288, 9, 1, 524288, 9, 2, 524288, 9, 3, 524288, 9, 4, 524288, 9, 5, 524288, 9, 6, 524288, 9, 7, 524288, 9, 8, 524288, 9, 9, 524288, 9, 10, 524288, 9, 11, 524288, 9, 12, 524288, 10, 65526, 524288, 10, 65527, 524288, 10, 65528, 524288, 10, 65529, 524288, 10, 65530, 524288, 10, 65531, 524288, 10, 65532, 524288, 10, 65533, 524288, 10, 65534, 524288, 10, 65535, 524288, 10, 0, 524288, 10, 1, 524288, 10, 2, 524288, 10, 3, 524288, 10, 4, 524288, 10, 5, 524288, 10, 6, 524288, 10, 7, 524288, 10, 8, 524288, 10, 9, 524288, 10, 10, 524288, 10, 11, 524288, 10, 12, 524288, 11, 65526, 524288, 11, 65527, 524288, 11, 65528, 524288, 11, 65529, 524288, 11, 65530, 524288, 11, 65531, 524288, 11, 65532, 524288, 11, 65533, 524288, 11, 65534, 524288, 11, 65535, 524288, 11, 0, 524288, 11, 1, 524288, 11, 2, 524288, 11, 3, 524288, 11, 4, 524288, 11, 5, 524288, 11, 6, 524288, 11, 7, 524288, 11, 8, 524288, 11, 9, 524288, 11, 10, 524288, 11, 11, 524288, 11, 12, 524288, 12, 65526, 524288, 12, 65527, 524288, 12, 65528, 524288, 12, 65529, 524288, 12, 65530, 524288, 12, 65531, 524288, 12, 65532, 524288, 12, 65533, 524288, 12, 65534, 524288, 12, 65535, 524288, 12, 0, 524288, 12, 1, 524288, 12, 2, 524288, 12, 3, 524288, 12, 4, 524288, 12, 5, 524288, 12, 6, 524288, 12, 7, 524288, 12, 8, 524288, 12, 9, 524288, 12, 10, 524288, 12, 11, 524288, 12, 12, 524288, 13, 65526, 524288, 13, 65527, 524288, 13, 65528, 524288, 13, 65529, 524288, 13, 65530, 524288, 13, 65531, 524288, 13, 65532, 524288, 13, 65533, 524288, 13, 65534, 524288, 13, 65535, 524288, 13, 0, 524288, 13, 1, 524288, 13, 2, 524288, 13, 3, 524288, 13, 4, 524288, 13, 5, 524288, 13, 6, 524288, 13, 7, 524288, 13, 8, 524288, 13, 9, 524288, 13, 10, 524288, 13, 11, 524288, 13, 12, 524288, 14, 65526, 524288, 14, 65527, 524288, 14, 65528, 524288, 14, 65529, 524288, 14, 65530, 524288, 14, 65531, 524288, 14, 65532, 524288, 14, 65533, 524288, 14, 65534, 524288, 14, 65535, 524288, 14, 0, 524288, 14, 1, 524288, 14, 2, 524288, 14, 3, 524288, 14, 4, 524288, 14, 5, 524288, 14, 6, 524288, 14, 7, 524288, 14, 8, 524288, 14, 9, 524288, 14, 10, 524288, 14, 11, 524288, 14, 12, 524288, 15, 65526, 524288, 15, 65527, 524288, 15, 65528, 524288, 15, 65529, 524288, 15, 65530, 524288, 15, 65531, 524288, 15, 65532, 524288, 15, 65533, 524288, 15, 65534, 524288, 15, 65535, 524288, 15, 0, 524288, 15, 1, 524288, 15, 2, 524288, 15, 3, 524288, 15, 4, 524288, 15, 5, 524288, 15, 6, 524288, 15, 7, 524288, 15, 8, 524288, 15, 9, 524288, 15, 10, 524288, 15, 11, 524288, 15, 12, 524288, 16, 65526, 524288, 16, 65527, 524288, 16, 65528, 524288, 16, 65529, 524288, 16, 65530, 524288, 16, 65531, 524288, 16, 65532, 524288, 16, 65533, 524288, 16, 65534, 524288, 16, 65535, 524288, 16, 0, 524288, 16, 1, 524288, 16, 2, 524288, 16, 3, 524288, 16, 4, 524288, 16, 5, 524288, 16, 6, 524288, 16, 7, 524288, 16, 8, 524288, 16, 9, 524288, 16, 10, 524288, 16, 11, 524288, 16, 12, 524288, 65525, 8, 524288, 65525, 7, 524288, 8, 6, 524288, 8, 65530, 524288, 65535, 65529, 524288, 5, 65529, 524288, 4, 65529, 524288, 6, 65529, 524288, 7, 65529, 524288, 65523, 65531, 524288, 65524, 7, 524288, 65517, 65525, 917504, 65518, 65525, 917504, 65519, 65525, 917504, 65520, 65525, 917504, 65521, 65525, 917504, 65522, 65525, 917504, 65523, 65525, 917504, 65524, 65525, 917504, 65525, 65525, 917504, 65526, 65525, 917504, 65527, 65525, 917504, 65528, 65525, 917504, 65529, 65525, 917504, 65530, 65525, 917504, 65531, 65525, 917504, 65532, 65525, 917504, 65533, 65525, 917504, 65534, 65525, 917504, 65535, 65525, 917504, 0, 65525, 917504, 1, 65525, 917504, 2, 65525, 917504, 3, 65525, 917504, 4, 65525, 917504, 5, 65525, 917504, 6, 65525, 917504, 7, 65525, 917504, 8, 65525, 917504, 9, 65525, 917504, 10, 65525, 917504, 11, 65525, 917504, 12, 65525, 917504, 13, 65525, 917504, 14, 65525, 917504, 15, 65525, 917504, 16, 65525, 917504)
+}
+
+[node name="road" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.22253, 0)
+mesh_library = ExtResource("2_hbghi")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65535, 0, 0, 65534, 0, 655367, 65534, 65535, 5, 6, 3, 1048581, 5, 3, 1048581, 5, 2, 1048581, 4, 2, 1048581, 4, 1, 1048581, 3, 1, 1048581, 3, 0, 1048581, 2, 0, 5, 65534, 65533, 1048581, 65533, 65533, 1048581, 65531, 65533, 1048581, 65530, 65533, 1048581, 65529, 65533, 1048581, 65528, 65533, 1048581, 65527, 65533, 1048581, 65527, 65534, 1048581, 65527, 65535, 1048581, 65527, 0, 655367, 65527, 1, 1048581, 65528, 1, 1048581, 65528, 2, 1048581, 65529, 2, 1048581, 65529, 3, 1048581, 65530, 3, 1048581, 65531, 3, 1048581, 65532, 3, 1048581, 65532, 4, 1048581, 65524, 65530, 1048581, 65524, 65531, 1048581, 65524, 65532, 1048581, 65524, 65533, 1048581, 65524, 65534, 1048581, 65524, 65535, 1048581, 65524, 0, 1048581, 65524, 1, 1048581, 65524, 2, 1048581, 65524, 3, 1048581, 65524, 4, 1048581, 65524, 5, 1048581, 65524, 6, 1048581, 65525, 65530, 1048581, 65525, 65531, 1048581, 65525, 65532, 1048581, 65525, 65533, 1048581, 65525, 65534, 1048581, 65525, 65535, 1048581, 65525, 0, 1048581, 65525, 1, 1048581, 65525, 2, 1048581, 65525, 3, 1048581, 65525, 4, 1048581, 65525, 5, 1048581, 65525, 6, 1048581, 65526, 65530, 1048581, 65526, 65531, 1048581, 65526, 65532, 1048581, 65526, 65533, 1048581, 65526, 65534, 1048581, 65526, 65535, 1048581, 65526, 0, 1048581, 65526, 1, 1048581, 65526, 2, 1048581, 65526, 3, 1048581, 65526, 4, 1048581, 65526, 5, 1048581, 65526, 6, 1048581, 65527, 65530, 1048581, 65527, 65531, 1048581, 65527, 65532, 1048581, 65527, 2, 1048581, 65527, 3, 1048581, 65527, 4, 1048581, 65527, 5, 1048581, 65527, 6, 1048581, 65528, 65530, 1048581, 65528, 65531, 1048581, 65528, 65532, 1048581, 65528, 65534, 1048581, 65528, 65535, 1048581, 65528, 0, 655367, 65528, 3, 1048581, 65528, 4, 1048581, 65528, 5, 1048581, 65528, 6, 1048581, 65529, 65530, 1048581, 65529, 65531, 1048581, 65529, 65532, 1048581, 65529, 65534, 1048581, 65529, 65535, 1048581, 65529, 0, 655367, 65529, 1, 1048581, 65529, 4, 1048581, 65529, 5, 1048581, 65529, 6, 1048581, 65530, 65530, 1048581, 65530, 65531, 1048581, 65530, 65532, 1048581, 65530, 65534, 5, 65530, 65535, 5, 65530, 0, 655367, 65530, 1, 1048581, 65530, 2, 1048581, 65530, 4, 1048581, 65530, 5, 1048581, 65530, 6, 1048581, 65531, 65530, 1048581, 65531, 65531, 1048581, 65531, 65532, 1048581, 65531, 65534, 5, 65531, 65535, 5, 65531, 0, 655367, 65531, 1, 1048581, 65531, 2, 1048581, 65531, 4, 1048581, 65531, 5, 1048581, 65531, 6, 1048581, 65532, 65530, 1048581, 65532, 65531, 1048581, 65532, 65532, 1048581, 65532, 65533, 1048581, 65532, 65534, 5, 65532, 65535, 5, 65532, 0, 655367, 65532, 1, 1048581, 65532, 2, 1048581, 65532, 5, 1048581, 65532, 6, 1048581, 65533, 65530, 1048581, 65533, 65531, 1048581, 65533, 65532, 1048581, 65533, 65534, 5, 65533, 65535, 5, 65533, 0, 655367, 65533, 1, 1048581, 65533, 2, 1048581, 65533, 3, 1048581, 65533, 4, 1048581, 65533, 5, 1048581, 65533, 6, 1048581, 65534, 65530, 1048581, 65534, 65531, 1048581, 65534, 65532, 1048581, 65534, 65534, 5, 65534, 1, 1048581, 65534, 2, 1048581, 65534, 3, 1048581, 65534, 4, 1048581, 65534, 5, 1048581, 65534, 6, 1048581, 65535, 65530, 1048581, 65535, 65531, 1048581, 65535, 65532, 1048581, 65535, 1, 1048581, 65535, 2, 1048581, 65535, 3, 1048581, 65535, 4, 1048581, 65535, 5, 1048581, 65535, 6, 1048581, 0, 65530, 1048581, 0, 65531, 1048581, 0, 65532, 1048581, 0, 1, 1048581, 0, 2, 1048581, 0, 3, 1048581, 0, 4, 1048581, 0, 5, 1048581, 0, 6, 1048581, 1, 65530, 1048581, 1, 65531, 1048581, 1, 65532, 1048581, 1, 1, 1048581, 1, 2, 1048581, 1, 3, 1048581, 1, 4, 1048581, 1, 5, 1048581, 1, 6, 1048581, 2, 65530, 1048581, 2, 65531, 1048581, 2, 65532, 1048581, 2, 1, 1048581, 2, 2, 1048581, 2, 3, 1048581, 2, 4, 1048581, 2, 5, 1048581, 2, 6, 1048581, 3, 65530, 1048581, 3, 65531, 1048581, 3, 65532, 1048581, 3, 2, 1048581, 3, 3, 1048581, 3, 4, 1048581, 3, 5, 1048581, 3, 6, 1048581, 4, 65530, 1048581, 4, 65531, 1048581, 4, 65532, 1048581, 4, 65533, 1048581, 4, 65534, 1048581, 4, 65535, 1048581, 4, 0, 1048581, 4, 3, 1048581, 4, 4, 1048581, 4, 5, 1048581, 4, 6, 1048581, 5, 65530, 1048581, 5, 65531, 1048581, 5, 65532, 1048581, 5, 65533, 1048581, 5, 65534, 1048581, 5, 65535, 1048581, 5, 0, 1048581, 5, 1, 1048581, 5, 4, 1048581, 5, 5, 1048581, 5, 6, 1048581, 6, 65530, 1048581, 6, 65531, 1048581, 6, 65532, 1048581, 6, 65533, 1048581, 6, 65534, 1048581, 6, 65535, 1048581, 6, 0, 1048581, 6, 1, 1048581, 6, 2, 1048581, 6, 4, 1048581, 6, 5, 1048581, 6, 6, 1048581, 7, 65530, 1048581, 7, 65531, 1048581, 7, 65532, 1048581, 7, 65533, 1048581, 7, 65534, 1048581, 7, 65535, 1048581, 7, 0, 1048581, 7, 1, 1048581, 7, 2, 1048581, 7, 3, 1048581, 7, 4, 1048581, 7, 5, 1048581, 7, 6, 1048581, 65535, 65534, 5, 65535, 65533, 655365, 65535, 65535, 655365, 0, 0, 0, 1, 65535, 2, 0, 65535, 0, 0, 65534, 655366, 1, 65534, 655366, 2, 65534, 655366, 3, 65534, 655366, 0, 65533, 655365, 1, 65533, 655365, 2, 65533, 655365, 3, 65533, 655365, 2, 65535, 6, 3, 65535, 6, 1, 0, 1048582)
+}
+metadata/_editor_floor_ = Vector3(0, 8, 0)
+
+[node name="truck-grey" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.41198, 0, 0, 0, 3.50308, 0, 0, 0, 3.76248, 7.52573, -1.73909, 0)
+mesh = SubResource("ArrayMesh_j6086")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="truck-grey"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="truck-grey/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rka8t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5rr72")
+}
+autoplay = "RESET"
+
+[node name="deadblock2" type="Area3D" parent="."]
+transform = Transform3D(-0.502289, 0.000700111, 0.0548942, 0.000128652, 2.16369, 0.0118191, -0.00358624, -0.00656397, -2.78931, 4.28224, 9.02977, -3.86471)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock2"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock2"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_5rr72")
+
+[node name="deadblock" type="Area3D" parent="."]
+transform = Transform3D(0.00522482, -0.00831703, 2.73433, -0.00406046, 2.75562, 0.00831195, -0.99471, -0.0113032, 0.014344, -1.65846, 9.74481, 11.7373)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_j7kpp")
+
+[node name="deadblock3" type="Area3D" parent="."]
+transform = Transform3D(0.0176079, -6.56523e-08, -1.65728, 0.0364714, 0.993553, 0.000305041, 1.86719, -0.0194068, 0.0156225, -10.0177, 10.3084, -0.0156312)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock3"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock3"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_gyffv")
+
+[node name="platformsHolder" type="Node3D" parent="."]
+transform = Transform3D(-0.0137178, 0, -0.999906, 0, 1, 0, 0.999906, 0, -0.0137178, 9.62512, 5.66484, -8.8442)
+
+[node name="platform2" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 8, -8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform2"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform2"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform5" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.39, 20, -33.633)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform5"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform5"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform6" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.155, 24, -43.543)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform6"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform6"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform7" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6391, 28, -48.427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform7"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform7"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform8" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1867, 32, -47.996)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform8"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform8"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform9" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4227, 36, -37.5534)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform9"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform9"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform10" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.93, 40, -28.5099)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform10"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform10"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform11" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.137, 32, -22.6594)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform11"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform11"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform12" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.2028, 36, -12.8471)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform12"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform12"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform13" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.9302, 40, -9.05824)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform13"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform13"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform14" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.0576, 44, -1.843)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform14"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform14"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform15" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2685, 48, 6.94375)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform15"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform15"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform3" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93, 12, -17.037)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform3"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform3"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform4" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -27)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform4"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform4"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="platform1" type="StaticBody3D" parent="platformsHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platformsHolder/platform1"]
+shape = SubResource("BoxShape3D_bjebc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="platformsHolder/platform1"]
+mesh = SubResource("BoxMesh_5rr72")
+skeleton = NodePath("../../..")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("7_j7kpp")
+
+[node name="deadblock6" type="Area3D" parent="."]
+transform = Transform3D(0.662088, 0, -3.66339, 0, 3.08508, 0, 2.04182, 0, 1.1879, 30.9076, 19.1784, -5.68005)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock6"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock6"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_5hph3")
+
+[node name="deadblock5" type="Area3D" parent="."]
+transform = Transform3D(1.30825, 0, 0.896935, 0, 1.90605, 0, -2.11115, 0, 0.55582, 52.2971, 40.6854, -53.6876)
+script = ExtResource("6_j7kpp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock5"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+mesh = SubResource("BoxMesh_mp81a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deadblock5"]
+transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0, 0.344849, 0.0574169, 0.177046, 0)
+shape = SubResource("BoxShape3D_1pe0h")
+
+[node name="gaolLv1" parent="." instance=ExtResource("8_bjebc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29823, 55.8524, -54.0932)
+script = ExtResource("9_5rr72")
+
+[connection signal="body_entered" from="deadblock2" to="deadblock2" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock" to="deadblock" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock3" to="deadblock3" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock6" to="deadblock6" method="_on_body_entered"]
+[connection signal="body_entered" from="deadblock5" to="deadblock5" method="_on_body_entered"]
+[connection signal="body_entered" from="gaolLv1" to="gaolLv1" method="_on_body_entered"]
