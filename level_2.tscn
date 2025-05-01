@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ulafrbw7hmk6"]
+[gd_scene load_steps=23 format=3 uid="uid://ulafrbw7hmk6"]
 
 [ext_resource type="Script" uid="uid://dydb1lxv1optr" path="res://player2.gd" id="1_5hnhx"]
 [ext_resource type="Texture2D" uid="uid://d2m4d62fq1oft" path="res://texture/ground texture/card/Stylized_Card_001_basecolor.png" id="2_78pok"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bmrsrg1sm48k1" path="res://texture/ground texture/card/Stylized_Card_001_normal.png" id="7_cuxq2"]
 [ext_resource type="Texture2D" uid="uid://do4il23plm0hv" path="res://texture/ground texture/card/Stylized_Card_001_roughness.png" id="8_wvr33"]
 [ext_resource type="Texture2D" uid="uid://c6au0t2xu60x1" path="res://texture/ground texture/card/Stylized_Card_001_translucency.png" id="9_sgm4o"]
-[ext_resource type="PackedScene" uid="uid://fv61405qyt3b" path="res://deadblock_2_for_second_lvl.tscn" id="15_5hnhx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kpjcp"]
 
@@ -55,7 +54,7 @@ data = PackedVector3Array(63.1963, 0.0776, 63.1963, -63.1963, 0.0776, 63.1963, 6
 [node name="level_2" type="Node3D"]
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 465, 35.6395, -24.6579)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 658.263, 128.419, 42.4035)
 script = ExtResource("1_5hnhx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
@@ -99,18 +98,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 274.959, 1.35461, -86.3421)
 
 [node name="teleportation2" parent="." instance=ExtResource("6_0s5r2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 295.671, 2.48399, -53.4282)
-
-[node name="deadblock 2 for second lvl" parent="." instance=ExtResource("15_5hnhx")]
-transform = Transform3D(-0.000568248, 0, 70, 0, 5000, 0, -13000, 0, -3.0598e-06, 58.7633, 0.75275, -1.00673)
-
-[node name="deadblock 2 for second lvl4" parent="." instance=ExtResource("15_5hnhx")]
-transform = Transform3D(-0.000568248, 0, 70, 0, 5000, 0, -13000, 0, -3.0598e-06, -62.4606, 0.75275, 3.51412)
-
-[node name="deadblock 2 for second lvl2" parent="." instance=ExtResource("15_5hnhx")]
-transform = Transform3D(-13000, 0, 6.11959e-06, 0, 5000, 0, -0.0011365, 0, -70, 0.86491, 0.75275, 60.401)
-
-[node name="deadblock 2 for second lvl3" parent="." instance=ExtResource("15_5hnhx")]
-transform = Transform3D(-13000, 0, 6.11959e-06, 0, 5000, 0, -0.0011365, 0, -70, 0.86491, 0.75275, -65.8831)
 
 [node name="teleportation3" parent="." instance=ExtResource("6_0s5r2")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 668.703, -5.77961, 5.23742)
