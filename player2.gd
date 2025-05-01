@@ -83,3 +83,4 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation.y += event.relative.x / -sensitivity
 		rotation.x += event.relative.y / - sensitivity
+		rotation.x = clampf(rotation.x,-0.75,0.75)
