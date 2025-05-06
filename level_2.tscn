@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ulafrbw7hmk6"]
+[gd_scene load_steps=27 format=3 uid="uid://ulafrbw7hmk6"]
 
 [ext_resource type="Script" uid="uid://dydb1lxv1optr" path="res://player2.gd" id="1_5hnhx"]
 [ext_resource type="Texture2D" uid="uid://d2m4d62fq1oft" path="res://texture/ground texture/card/Stylized_Card_001_basecolor.png" id="2_78pok"]
@@ -9,13 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://du0imxg3l20mw" path="res://texture/ground texture/card/Stylized_Card_001_emissive.png" id="4_jcnlr"]
 [ext_resource type="ArrayMesh" uid="uid://dt67dnv7chk78" path="res://cottage_obj.obj" id="4_n7ypv"]
 [ext_resource type="Texture2D" uid="uid://diddstxnu6anm" path="res://texture/ground texture/card/Stylized_Card_001_height.png" id="5_5kfcu"]
-[ext_resource type="PackedScene" path="res://teleportation.tscn" id="6_0s5r2"]
+[ext_resource type="PackedScene" uid="uid://bnrhrihxfwiu6" path="res://teleportation.tscn" id="6_0s5r2"]
 [ext_resource type="Texture2D" uid="uid://di5o1x7a3mt70" path="res://texture/ground texture/card/Stylized_Card_001_metallic.png" id="6_i558w"]
 [ext_resource type="Texture2D" uid="uid://bmrsrg1sm48k1" path="res://texture/ground texture/card/Stylized_Card_001_normal.png" id="7_cuxq2"]
 [ext_resource type="Texture2D" uid="uid://do4il23plm0hv" path="res://texture/ground texture/card/Stylized_Card_001_roughness.png" id="8_wvr33"]
 [ext_resource type="Texture2D" uid="uid://c6au0t2xu60x1" path="res://texture/ground texture/card/Stylized_Card_001_translucency.png" id="9_sgm4o"]
 [ext_resource type="PackedScene" uid="uid://bieb6fvwvb3a4" path="res://invisiblewall.tscn" id="15_5hnhx"]
 [ext_resource type="Script" uid="uid://blc5rt2dh28ox" path="res://teleportation.gd" id="15_78pok"]
+[ext_resource type="PackedScene" uid="uid://dtk0jg24tbdef" path="res://goal.tscn" id="17_jcnlr"]
+[ext_resource type="Script" uid="uid://c4soohmwwqpuk" path="res://goalLvl2.gd" id="18_5kfcu"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kpjcp"]
 
@@ -128,4 +130,8 @@ transform = Transform3D(1, 0, 0, 0, 5766.84, 0, 0, 0, 22440.1, 65.5381, -8.82067
 
 [node name="destination" type="Node3D" parent="."]
 
+[node name="goal" parent="." instance=ExtResource("17_jcnlr")]
+script = ExtResource("18_5kfcu")
+
 [connection signal="body_entered" from="teleportation" to="Player" method="_on_teleportation_body_entered"]
+[connection signal="body_entered" from="goal" to="goal" method="_on_body_entered"]
