@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtk0jg24tbdef"]
+
+[ext_resource type="ArrayMesh" uid="uid://c68r5o5xfy5df" path="res://birthday-cake_v3_L3.123c45c5c817-3d9f-461e-83bb-8157bffd5569/10868_birthday-cake_v3.obj" id="1_6k3qi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7sh37"]
+
+[node name="Area3D" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_7sh37")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, -3.0598e-09, 0.07, 0, -0.07, -3.0598e-09, 0, 0, 0)
+mesh = ExtResource("1_6k3qi")

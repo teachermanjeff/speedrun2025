@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://dh5oa18oxh2yt"]
+
+[ext_resource type="Texture2D" uid="uid://bhaqt6oomfgdq" path="res://texture/ground texture/bar block/Concrete_Wall_008_basecolor.jpg" id="1_nmyek"]
+[ext_resource type="Texture2D" uid="uid://c1tlpq8qdhuoh" path="res://texture/ground texture/bar block/Concrete_Wall_008_ambientOcclusion.jpg" id="2_pyvs1"]
+[ext_resource type="Texture2D" uid="uid://bm48fkupxs2de" path="res://texture/ground texture/bar block/Concrete_Wall_008_height.png" id="3_p2glv"]
+[ext_resource type="Texture2D" uid="uid://c4g6lrlhgty8v" path="res://texture/ground texture/bar block/Concrete_Wall_008_metallic.jpg" id="4_7btf0"]
+[ext_resource type="Texture2D" uid="uid://bmpcisxv60w1l" path="res://texture/ground texture/bar block/Concrete_Wall_008_normal.jpg" id="5_ramyv"]
+[ext_resource type="Texture2D" uid="uid://buonf62r50qro" path="res://texture/ground texture/bar block/Concrete_Wall_008_roughness.jpg" id="6_oqujc"]
+
+[resource]
+albedo_texture = ExtResource("1_nmyek")
+metallic = 1.0
+metallic_texture = ExtResource("4_7btf0")
+roughness_texture = ExtResource("6_oqujc")
+normal_enabled = true
+normal_scale = 2.36
+normal_texture = ExtResource("5_ramyv")
+ao_enabled = true
+ao_light_affect = 0.48
+ao_texture = ExtResource("2_pyvs1")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_p2glv")

@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=11 format=3 uid="uid://vgir2lml0tnk"]
+[gd_resource type="MeshLibrary" load_steps=11 format=3 uid="uid://djlgvil5r0hnc"]
 
 [ext_resource type="Texture2D" uid="uid://bdr8m8omt0ewm" path="res://texture/ground texture/Stylized_Stone_Floor_006_basecolor.png" id="1_hjshw"]
 [ext_resource type="Texture2D" uid="uid://timjtydcc03t" path="res://texture/ground texture/Stylized_Stone_Floor_006_ambientOcclusion.png" id="2_3cfta"]

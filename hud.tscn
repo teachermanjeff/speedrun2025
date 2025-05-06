@@ -1,7 +1,24 @@
-[gd_scene format=3 uid="uid://bpr6uq4dl273v"]
+[gd_scene load_steps=3 format=3 uid="uid://bpr6uq4dl273v"]
+
+[ext_resource type="Script" uid="uid://c5ytrpbgm574m" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="FontFile" uid="uid://cktdai2as2d28" path="res://Cascadia_Code/CascadiaCode-Italic-VariableFont_wght.ttf" id="2_64ctp"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_37p78")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="teacher" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 2.0
+offset_top = -16.0
+offset_right = 1151.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 40
+text = "\"Move and jump by pressing buttons\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="intro" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true

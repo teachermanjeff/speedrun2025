@@ -1,9 +1,37 @@
-[gd_scene format=3 uid="uid://b7mxsypbr5rl1"]
+[gd_scene load_steps=5 format=3 uid="uid://b7mxsypbr5rl1"]
+
+[ext_resource type="Texture2D" uid="uid://djxjxq8i2uagc" path="res://startscreenbackground.jpeg" id="1_pevhg"]
+[ext_resource type="Script" uid="uid://t0n7o75oux3" path="res://button.gd" id="2_afy8x"]
+[ext_resource type="FontFile" uid="uid://cktdai2as2d28" path="res://Cascadia_Code/CascadiaCode-Italic-VariableFont_wght.ttf" id="2_k1na2"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_k1na2"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325.25)
+scale = Vector2(4.08099, 3.69209)
+texture = ExtResource("1_pevhg")
 
 [node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 399.0
+offset_top = 399.0
+offset_right = 809.0
+offset_bottom = 597.0
+theme_override_fonts/font = ExtResource("2_k1na2")
+theme_override_font_sizes/font_size = 50
+text = "start"
+icon = SubResource("ViewportTexture_k1na2")
+script = ExtResource("2_afy8x")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 84.0
+offset_right = 1153.0
+offset_bottom = 321.0
+theme_override_fonts/font = ExtResource("2_k1na2")
+theme_override_font_sizes/font_size = 75
+text = "Jumping Ball"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://nmyfsxd5a2vv"]
+
+[node name="touchcontrol" type="CanvasLayer"]
+
+[node name="left" type="TouchScreenButton" parent="."]
+
+[node name="right" type="TouchScreenButton" parent="."]
+
+[node name="forward" type="TouchScreenButton" parent="."]
+
+[node name="backward" type="TouchScreenButton" parent="."]
+
+[node name="jump" type="TouchScreenButton" parent="."]

@@ -1,8 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnoriaxlgjdbq"]
+[gd_scene load_steps=13 format=3 uid="uid://dnoriaxlgjdbq"]
 
 [ext_resource type="Script" uid="uid://gylh7jk6cj78" path="res://player.gd" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://d2m4d62fq1oft" path="res://texture/ground texture/card/Stylized_Card_001_basecolor.png" id="2_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://csrdv1v42orgo" path="res://texture/ground texture/card/Stylized_Card_001_ambientOcclusion.png" id="3_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://du0imxg3l20mw" path="res://texture/ground texture/card/Stylized_Card_001_emissive.png" id="4_3tkgg"]
+[ext_resource type="Texture2D" uid="uid://diddstxnu6anm" path="res://texture/ground texture/card/Stylized_Card_001_height.png" id="5_l6ohk"]
+[ext_resource type="Texture2D" uid="uid://di5o1x7a3mt70" path="res://texture/ground texture/card/Stylized_Card_001_metallic.png" id="6_oudfo"]
+[ext_resource type="Texture2D" uid="uid://bmrsrg1sm48k1" path="res://texture/ground texture/card/Stylized_Card_001_normal.png" id="7_d6rpx"]
+[ext_resource type="Texture2D" uid="uid://do4il23plm0hv" path="res://texture/ground texture/card/Stylized_Card_001_roughness.png" id="8_r3kul"]
+[ext_resource type="Texture2D" uid="uid://c6au0t2xu60x1" path="res://texture/ground texture/card/Stylized_Card_001_translucency.png" id="9_jatw7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kpjcp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv870"]
+albedo_texture = ExtResource("2_wi0c6")
+metallic = 1.0
+metallic_texture = ExtResource("6_oudfo")
+roughness_texture = ExtResource("8_r3kul")
+emission_enabled = true
+emission_texture = ExtResource("4_3tkgg")
+normal_enabled = true
+normal_texture = ExtResource("7_d6rpx")
+ao_enabled = true
+ao_texture = ExtResource("3_hp6x6")
+heightmap_enabled = true
+heightmap_texture = ExtResource("5_l6ohk")
+subsurf_scatter_enabled = true
+subsurf_scatter_texture = ExtResource("9_jatw7")
 
 [sub_resource type="SphereMesh" id="SphereMesh_kne1u"]
 
@@ -12,8 +36,9 @@ script = ExtResource("1_xhfnw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_kpjcp")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_rv870")
+mesh = SubResource("SphereMesh_kne1u")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.894365, 0.447337, 0, -0.447337, 0.894365, 0, 1.13313, 1.56175)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_kne1u")
