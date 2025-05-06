@@ -83,3 +83,10 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation.y += event.relative.x / -sensitivity
 		rotation.x += event.relative.y / - sensitivity
+		rotation.x = clampf(rotation.x,-0.75,0.75)
+
+
+func _on_teleportation_body_entered(body: Node3D) -> void:
+	position.x =295.671
+	position.y =2.484
+	position.z =-53.428
