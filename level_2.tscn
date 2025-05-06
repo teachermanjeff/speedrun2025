@@ -56,7 +56,7 @@ data = PackedVector3Array(63.1963, 0.0776, 63.1963, -63.1963, 0.0776, 63.1963, 6
 [node name="level_2" type="Node3D"]
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.53781, 55.5908, 33.9886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8089, 19.3716, 19.9922)
 script = ExtResource("1_5hnhx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
