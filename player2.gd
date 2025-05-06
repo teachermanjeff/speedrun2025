@@ -8,7 +8,7 @@ const gravity = 2
 var sensitivity = 150
 var double_jump = 1
 var time_for_doublejump = 10
-
+var check_point
 
 func _on_timer_timeout():
 	time_for_doublejump -= 1
@@ -75,6 +75,12 @@ func _process(_delta):
 		get_tree().reload_current_scene()
 	
 	move_and_slide()
+	
+	if check_point == true:
+		position.x =295.671
+		position.y =2.484
+		position.z =-53.428
+		check_point == false
 	
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
