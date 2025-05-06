@@ -5,7 +5,7 @@ var speed = 10
 # Called when the node enters the scene tree for the first time.
 const jumpspeed = 100
 const gravity = 2
-var sensitivity = 100
+var sensitivity = 150
 var double_jump = 1
 var time_for_doublejump = 10
 
@@ -84,3 +84,9 @@ func _input(event):
 		rotation.y += event.relative.x / -sensitivity
 		rotation.x += event.relative.y / - sensitivity
 		rotation.x = clampf(rotation.x,-0.75,0.75)
+
+
+func _on_teleportation_body_entered(body: Node3D) -> void:
+	position.x =295.671
+	position.y =2.484
+	position.z =-53.428
