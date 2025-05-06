@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://5o6kovihfmxl"]
+
+[ext_resource type="Script" uid="uid://bpvd1jg4u77h4" path="res://check_point.gd" id="1_bqauh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lywxg"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_c21nn"]
+
+[node name="check_point" type="Area3D"]
+script = ExtResource("1_bqauh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_lywxg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_c21nn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
