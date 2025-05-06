@@ -77,9 +77,9 @@ func _process(_delta):
 	move_and_slide()
 	
 	if check_point == true:
-		position.x =295.671
-		position.y =2.484
-		position.z =-53.428
+		position.x =345.82
+		position.y =1.345
+		position.z =-40.90
 		check_point == false
 	
 func _ready():
