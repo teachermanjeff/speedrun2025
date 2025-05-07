@@ -223,7 +223,7 @@ libraries = {
 autoplay = "RESET"
 
 [node name="deadblock2" type="Area3D" parent="."]
-transform = Transform3D(-0.502289, 0.000601059, 0.0199163, 0.000128652, 2.16369, -0.00846981, -0.00358623, -0.00656468, -2.78979, 4.28224, 9.02977, -3.86471)
+transform = Transform3D(-0.502289, 0.000700111, 0.0548942, 0.000128652, 2.16369, 0.0118191, -0.00358624, -0.00656397, -2.78931, 4.28224, 9.02977, -3.86471)
 script = ExtResource("6_j7kpp")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock2"]
@@ -235,7 +235,7 @@ transform = Transform3D(0.000774777, -2.04792, 0, 0.439516, 0.00361007, 0, 0, 0,
 shape = SubResource("BoxShape3D_5rr72")
 
 [node name="deadblock" type="Area3D" parent="."]
-transform = Transform3D(0.00522483, -0.00831709, 2.73433, -0.00406046, 2.75562, 0.00831155, -0.99471, -0.0112923, 0.0143285, -1.65846, 9.74481, 11.7373)
+transform = Transform3D(0.00522482, -0.00831703, 2.73433, -0.00406046, 2.75562, 0.00831195, -0.99471, -0.0113032, 0.014344, -1.65846, 9.74481, 11.7373)
 script = ExtResource("6_j7kpp")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="deadblock"]
