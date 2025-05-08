@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpr6uq4dl273v"]
 
-[ext_resource type="Script" uid="uid://c5ytrpbgm574m" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="Script" path="res://hud.gd" id="1_37p78"]
 [ext_resource type="FontFile" uid="uid://cktdai2as2d28" path="res://Cascadia_Code/CascadiaCode-Italic-VariableFont_wght.ttf" id="2_64ctp"]
 
 [node name="CanvasLayer" type="CanvasLayer"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7mxsypbr5rl1"]
 
 [ext_resource type="Texture2D" uid="uid://djxjxq8i2uagc" path="res://startscreenbackground.jpeg" id="1_pevhg"]
-[ext_resource type="Script" uid="uid://t0n7o75oux3" path="res://button.gd" id="2_afy8x"]
+[ext_resource type="Script" path="res://button.gd" id="2_afy8x"]
 [ext_resource type="FontFile" uid="uid://cktdai2as2d28" path="res://Cascadia_Code/CascadiaCode-Italic-VariableFont_wght.ttf" id="2_k1na2"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_k1na2"]
