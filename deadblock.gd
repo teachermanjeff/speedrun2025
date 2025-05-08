@@ -6,5 +6,5 @@ func _ready():
 	pass
 
 func _on_body_entered(body):
-	if body.name == "ball":
+	if body.name == "Player":
 		get_tree().reload_current_scene()

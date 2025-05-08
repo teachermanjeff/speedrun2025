@@ -5,7 +5,7 @@ var speed = 10
 # Called when the node enters the scene tree for the first time.
 const jumpspeed = 100
 const gravity = 2
-var sensitivity = 150
+var sensitivity = 100
 var double_jump = 1
 var time_for_doublejump = 10
 var check_point
