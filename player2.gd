@@ -1,14 +1,15 @@
 extends CharacterBody3D
 
 const  ROLLspeed = deg_to_rad(5)
-var speed = 10
+var speed = 20
 # Called when the node enters the scene tree for the first time.
-const jumpspeed = 100
+const jumpspeed = 50
 const gravity = 2
 var sensitivity = 100
 var double_jump = 1
 var time_for_doublejump = 10
 var check_point
+var safe
 
 func _on_timer_timeout():
 	time_for_doublejump -= 1
@@ -17,7 +18,6 @@ func _on_timer_timeout():
 			double_jump = 0
 	print("double_jump")
 
-	
 func _process(_delta):
 	#restart
 	if Input.is_action_just_pressed("restart"):
@@ -71,19 +71,19 @@ func _process(_delta):
 	
 	
 	if position.y < -10:
-		
-		get_tree().reload_current_scene()
+		if safe == true:
+			position.x = 347
+			position.y = 16
+			position.z = -40
+		else:
+			get_tree().reload_current_scene()
 	
 	move_and_slide()
 	
-	if check_point == true:
-		position.x =345.82
-		position.y =1.345
-		position.z =-40.90
-		check_point == false
 	
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	safe = false
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -96,3 +96,8 @@ func _on_teleportation_body_entered(body: Node3D) -> void:
 	position.x =295.671
 	position.y =2.484
 	position.z =-53.428
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print ("activated")
+	safe = true
