@@ -98,6 +98,6 @@ func _on_teleportation_body_entered(body: Node3D) -> void:
 	position.z =-53.428
 
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	print ("activated")
+func _on_check_point_body_entered(body: Node3D) -> void:
 	safe = true
+	print("activated")
