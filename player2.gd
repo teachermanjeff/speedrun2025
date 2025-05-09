@@ -44,6 +44,11 @@ func _process(_delta):
 
 		
 	#movement
+	if Input.is_action_pressed("accelerate"):
+		speed = 28
+	else:
+		speed = 20
+		
 	if Input.is_action_pressed("right"):
 		velocity.z = speed * global_transform.basis.x.z
 		velocity.x = speed * global_transform.basis.x.x
@@ -70,7 +75,7 @@ func _process(_delta):
 		velocity.x = 0
 	
 	
-	if position.y < -10:
+	if position.y < -1000:
 		if safe == true:
 			position.x = 347
 			position.y = 16
